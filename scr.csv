@@ -30,20 +30,20 @@ SELECT.txt,14,選択13,おまけ,Extra
 1-01.txt,176,モノローグ◇いつのまにか,"いつのまにか,<BR>いつのまにか","不知从何时起,<BR>不知从何时起"
 1-01.txt,183,モノローグ◇それと,自覚症状のない病のように,如同毫无自觉症状的病一般
 1-01.txt,190,モノローグ◇南の島,<TYPE interval=60>･･････</TYPE>何不自由のない楽園でさえ...<BR>僕はやめられないのだろう,<TYPE interval=60>･･････</TYPE>即使在毫无不自由的乐园里<BR>...我也无法停止吧
-1-01.txt,195,モノローグ◇今何が,「今　何が問題か」,“现在 有什么问题”
+1-01.txt,195,モノローグ◇今何が,「今　何が問題か」,“现在　有什么问题”
 1-01.txt,200,モノローグ◇馬鹿,馬鹿々々しいテーマだ,真是个愚蠢的主题
 1-03.txt,3,津名川セリフ◇３人とも,<TYPE interval=84>３人とも...<BR>聞こえるかい...,<TYPE interval=84>你们三个...<BR>听得到吗...
 1-03.txt,33,文セリフ◇反応,<TYPE interval=60>反応あります,<TYPE interval=60>有反应了
 1-03.txt,41,文セリフ◇大丈夫,<TYPE interval=70>大丈夫です,<TYPE interval=70>没问题
 1-03.txt,56,鄭セリフ◇各セクタ,<TYPE interval=50>･･･</TYPE><TYPE interval=70>各セクタ...<BR>プログラムチェック開始,<TYPE interval=50>･･･</TYPE><TYPE interval=70>各扇区...<BR>开始程序检查
 1-03.txt,62,津名川セリフ◇そうか,<TYPE interval=70>そうか,<TYPE interval=70>这样啊
-1-03.txt,69,津名川セリフ◇プログラムの,<TYPE interval=80>じゃ、...<BR>プログラムの準備を,<TYPE interval=80>那么...<BR>准备程序
+1-03.txt,69,津名川セリフ◇プログラムの,<TYPE interval=80>じゃ、...<BR>プログラムの準備を,<TYPE interval=80>那么，...<BR>准备程序
 1-03.txt,93,鄭②セリフ◇テストプログラム,<TYPE interval=70><FONT size=15>テストプログラム..<BR>半自動実行,<TYPE interval=70><FONT size=15>测试程序..<BR>半自动执行
 1-03.txt,95,鄭②セリフ◇センターフレーム,<TYPE interval=54><FONT size=15>センターフレームに<BR>パーミッション申請します,<TYPE interval=54><FONT size=15>向中心框架<BR>申请权限
 1-03.txt,97,文②セリフ◇生体制御システム,<TYPE interval=55><FONT size=15>生体制御システム正常..<BR>ゲル311&.66ケルビンで安定,<TYPE interval=55><FONT size=15>生体控制系统正常..<BR>凝胶311&.66开尔文　状态稳定
-1-03.txt,99,文②セリフ◇生体温度差,"<TYPE interval=55><FONT size=15>生体温度誤差±0&.2度..　安定レベルＡ,<BR>高速神経ネット.　スイッチします","<TYPE interval=55><FONT size=15>生体温度误差±0&.2度..　稳定等级Ａ,<BR>高速神经网络. 切换"
+1-03.txt,99,文②セリフ◇生体温度差,"<TYPE interval=55><FONT size=15>生体温度誤差±0&.2度..　安定レベルＡ,<BR>高速神経ネット.　スイッチします","<TYPE interval=55><FONT size=15>生体温度误差±0&.2度..　稳定等级Ａ,<BR>高速神经网络.　切换"
 1-03.txt,101,文③セリフ◇シグナルパルス,<TYPE interval=55><FONT size=15>シグナルパルス..<BR>クロック10KHzから<BR>20KHzで半固定ロック,<TYPE interval=55><FONT size=15>信号脉冲..<BR>时钟频率从10KHz至<BR>20KHz半固定锁定
-1-03.txt,103,文③セリフ◇１番から,<TYPE interval=55><FONT size=15>１番から64..　65から128番.<BR>Ｓ１からＳ６..　ロック終了です,<TYPE interval=55><FONT size=15>1至64号.. 65至128号.<BR>Ｓ１至Ｓ６..　锁定完成
+1-03.txt,103,文③セリフ◇１番から,<TYPE interval=55><FONT size=15>１番から64..　65から128番.<BR>Ｓ１からＳ６..　ロック終了です,<TYPE interval=55><FONT size=15>1至64号..　65至128号.<BR>Ｓ１至Ｓ６..　锁定完成
 1-03.txt,156,津名川セリフ◇･･････,<TYPE interval=50>･････････,<TYPE interval=50>･･････
 1-03.txt,161,鄭セリフ◇視覚,<FONT size=15><TYPE interval=70>視覚<BR>メインモニタ..１から３,<FONT size=15><TYPE interval=70>视觉<BR>主显示器..１至３
 1-03.txt,168,鄭セリフ◇脳波,<FONT size=15><TYPE interval=70>脳波パターングラフαとβ γ..<BR>サブモニタ12番から21番まで.<BR>順に入ります,<FONT size=15><TYPE interval=70>脑波模式图α、β、γ..<BR>副显示器12至21号.<BR>依次接入
@@ -75,7 +75,7 @@ SELECT.txt,14,選択13,おまけ,Extra
 1-04.txt,177,選択◇秘密,<TYPE interval=0><FONT color=red>秘密だよ,<TYPE interval=0><FONT color=red>是秘密哦
 1-04.txt,178,選択◇実はね･･････,<TYPE interval=0><FONT color=red>実はね･･････,<TYPE interval=0><FONT color=red>其实呢･･････
 1-04.txt,195,津名川セリフ◇どれくらい,<TYPE interval=70>どれくらいかかるかな？,<TYPE interval=70>大概要花多久呢？
-1-04.txt,197,水滝セリフ◇終わるまで,<TYPE interval=80>終わるまで..<BR>そうですね。<BR>２～３時間は,<TYPE interval=80>到结束为止的话..<BR>让我想想.<BR>大概需要２〜３小时吧
+1-04.txt,197,水滝セリフ◇終わるまで,<TYPE interval=80>終わるまで..<BR>そうですね。<BR>２～３時間は,<TYPE interval=80>到结束为止的话..<BR>让我想想。<BR>大概需要２〜３小时吧
 1-04.txt,201,津名川セリフ◇テスト,<TYPE interval=80>テスト,<TYPE interval=80>测试
 1-04.txt,229,水滝セリフ◇少し寝たほうが,<TYPE interval=80>やっぱり..少し.<BR>寝た方が,<TYPE interval=80>果然..还是稍微.<BR>睡一会儿比较好
 1-04.txt,233,水滝セリフ◇終わったら,終わったら<BR>起こしますから...　私,等结束了<BR>我会来叫您的...
@@ -100,7 +100,7 @@ SELECT.txt,14,選択13,おまけ,Extra
 1-04.txt,417,水滝セリフ◇津名川さん,"<TYPE interval=70>津名川さん,<BR>禅でもやってたんですか！？","<TYPE interval=70>津名川先生,<BR>你是在修禅吗！？"
 1-04.txt,421,津名川セリフ◇ああ,"あぁ<TYPE interval=60>･･････<TYPE>...いや<TYPE interval=60>･･････</TYPE>,<BR>まあ<TYPE interval=60>･･････</TYPE>","啊<TYPE interval=60>･･････<TYPE>...不<TYPE interval=60>･･････</TYPE>,<BR>嘛<TYPE interval=60>･･････</TYPE>"
 1-04.txt,432,津名川セリフ◇どうやら,<TYPE interval=70>どうやら僕には..<BR>冗談の勉強も..<BR>必要なようだな<TYPE interval=50>･･････</TYPE>,<TYPE interval=70>看来我也得..<BR>学学怎么开玩笑..<BR>才行了<TYPE interval=50>･･････</TYPE>
-1-05.txt,10,作業員セリフ◇よーし,<TYPE interval=80>よーし<WAIT time=300><BR>右側から上げろ,<TYPE interval=80>好嘞<WAIT time=300><BR>从右边往上升
+1-05.txt,10,作業員セリフ◇よーし,<TYPE interval=80>よーし<WAIT time=300><BR>右側から上げろ,<TYPE interval=80>好嘞<WAIT time=300><BR>从右边往上
 1-05.txt,12,作業員セリフ◇ゆっくり,ゆっくりだ,慢点
 1-05.txt,14,作業員セリフ◇そう,そう<TYPE interval=50>･･････</TYPE>...<BR>そう....　<TYPE interval=60>ストップ！,对<TYPE interval=50>･･････</TYPE>...<BR>对....　<TYPE interval=60>停！
 1-05.txt,40,作業員セリフ◇くそ,<TYPE interval=70>くそっ,<TYPE interval=70>可恶
@@ -140,7 +140,7 @@ SELECT.txt,14,選択13,おまけ,Extra
 1-07.txt,97,津名川独白◇僕に,<FONT color='#885522'><TYPE interval=80>僕に選択権はない,<FONT color='#885522'><TYPE interval=80>我没有选择权
 1-07.txt,102,津名川独白◇僕の治療は,<FONT color='#885522'><TYPE interval=80>僕の治療は...<BR>すべてが病院側に<BR>委ねられている,<FONT color='#885522'><TYPE interval=80>我的治疗...<BR>全都交由<BR>医院方面决定了
 1-07.txt,107,津名川独白◇人権,"<FONT color='#885522'><TYPE interval=80>人権などというものは...<BR>とっくの昔に誰かの,</TYPE><BR><TYPE style=Fade interval=0 speed=1000>（いや　おそらく家族のだろうが）</TYPE>,,,..<BR><TYPE interval=80>サインで僕の手元から消え去っていた</TYPE>","<FONT color='#885522'><TYPE interval=80>所谓的人权...<BR>早就在某个人,</TYPE><BR><TYPE style=Fade interval=0 speed=1000>（不，恐怕是家人的）</TYPE>,,,..<BR><TYPE interval=80>签字下从我手中消失了</TYPE>"
-1-07.txt,119,津名川独白◇その家族も,<FONT color='#885522'><TYPE interval=80>その家族も..　今となっては...<BR>あまり思い出すことが出来ない,<FONT color='#885522'><TYPE interval=80>就连那家人...事到如今...<BR>我也已经想不太起来了
+1-07.txt,119,津名川独白◇その家族も,<FONT color='#885522'><TYPE interval=80>その家族も..　今となっては...<BR>あまり思い出すことが出来ない,<FONT color='#885522'><TYPE interval=80>就连那家人...　事到如今...<BR>我也已经想不太起来了
 1-07.txt,124,津名川独白◇10の時,<FONT color='#885522'><TYPE interval=80>10のときに別れてから...<BR>もう７年間も会っていなかった,<FONT color='#885522'><TYPE interval=80>自从10岁分开后...<BR>我们已经整整7年没见过了
 1-07.txt,141,津名川セリフ◇そうですか,<FONT color='#885522'><TYPE interval=120>そうですか,<FONT color='#885522'><TYPE interval=120>这样啊
 1-07.txt,148,津名川独白◇医者,<FONT color='#885522'>医者達のための実験動物,<FONT color='#885522'>医生们的实验动物
@@ -154,7 +154,7 @@ SELECT.txt,14,選択13,おまけ,Extra
 1-07.txt,275,グラハムセリフ◇今日は,<FONT color='#885522'><TYPE interval=120>今日は素晴らしい日だ,<FONT color='#885522'><TYPE interval=120>今天真是个美好的日子
 1-07.txt,284,グラハムセリフ◇君は,<FONT color='#885522'>なかなかよい素質を<BR>持っているようだ,<FONT color='#885522'>看来你的素质<BR>相当不错呢
 1-07.txt,288,津名川セリフ◇素質,<FONT color='#885522'>素質？,<FONT color='#885522'>素质？
-1-07.txt,304,グラハムセリフ◇ふふ,"<FONT color='#885522'>ふふ...　紫だな,<BR>君のようなのは<BR>なかなかいないんだ","<FONT color='#885522'>呵呵... 是紫色的呢,<BR>像你这样的孩子<BR>可真是难得一见啊"
+1-07.txt,304,グラハムセリフ◇ふふ,"<FONT color='#885522'>ふふ...　紫だな,<BR>君のようなのは<BR>なかなかいないんだ","<FONT color='#885522'>呵呵...　是紫色的呢,<BR>像你这样的孩子<BR>可真是难得一见啊"
 1-07.txt,310,津名川セリフ◇紫,<FONT color='#885522'>紫？,<FONT color='#885522'>紫色？
 1-07.txt,329,グラハムセリフ◇今に,<FONT color='#885522'><TYPE interval=120>今に分かる,<FONT color='#885522'><TYPE interval=120>你很快就会明白了
 1-07.txt,336,グラハムセリフ◇経験,<FONT color='#885522'><TYPE interval=120>「経験に勝る信仰無し」<BR>....　というやつだよ,<FONT color='#885522'><TYPE interval=120>“没有什么信仰胜得过经验”<BR>....　就是这么回事
@@ -174,12 +174,12 @@ SELECT.txt,14,選択13,おまけ,Extra
 1-08.txt,55,津名川セリフ◇ん,<FONT size=15>ん<TYPE interval=80>･･････,<FONT size=15>嗯<TYPE interval=80>･･････
 1-08.txt,61,津名川セリフ◇んん,<FONT size=15>ん...ん<TYPE interval=70>･･････,<FONT size=15>嗯...嗯<TYPE interval=70>･･････
 1-08.txt,71,津名川セリフ◇だいじょうぶ,<TYPE interval=110>大丈夫,<TYPE interval=110>没事
-1-08.txt,80,津名川セリフ◇おわったかい,<TYPE interval=110>終わったかい？,<TYPE interval=110>结束了吗
+1-08.txt,80,津名川セリフ◇おわったかい,<TYPE interval=110>終わったかい？,<TYPE interval=110>结束了吗？
 1-08.txt,98,水滝セリフ◇今,<TYPE interval=75>今解析データ待ちです,<TYPE interval=75>现在正等解析数据呢
 1-08.txt,102,水滝セリフ◇前半の,<TYPE interval=65>前半のはもう..<BR>上がってくると<BR>思いますけど,<TYPE interval=65>前半部分的已经..<BR>应该快<BR>出来了
 1-08.txt,107,水滝セリフ◇エマちゃん,<TYPE interval=75>エマちゃん...<BR>調子良かったですよ,<TYPE interval=75>小艾玛...<BR>状态很好哦
 1-09.txt,16,真上セリフ◇主任,"<FONT size=22 face=""ＭＳ ゴシック""><TYPE interval=0>主任！","<FONT size=22 face=""ＭＳ ゴシック""><TYPE interval=0>主任！"
-1-09.txt,30,津名川セリフ◇真上君,<FONT size=18><TYPE interval=67>真上君か,<FONT size=18><TYPE interval=67>是真上啊
+1-09.txt,30,津名川セリフ◇真上君,<FONT size=18><TYPE interval=67>真上君か,<FONT size=18><TYPE interval=67>是真上君啊
 1-09.txt,37,真上セリフ◇新しい,<TYPE interval=80><FONT size=17>見ましたか？<BR>...新しい報告書,<TYPE interval=80><FONT size=17>您看过了吗？<BR>...新的报告书
 1-09.txt,48,津名川セリフ◇いや,<FONT size=17>いや,<FONT size=17>不
 1-09.txt,50,津名川セリフ◇まだ,<FONT size=17>まだ,<FONT size=17>还没
@@ -215,116 +215,116 @@ SELECT.txt,14,選択13,おまけ,Extra
 1-09.txt,318,津名川セリフ◇チーム,チームだからね,毕竟是一个团队嘛
 1-09.txt,326,真上セリフ◇もちろん,<FONT size=18><TYPE interval=40>もちろんです！,<FONT size=18><TYPE interval=40>那是当然！
 1-09.txt,329,津名川セリフ◇いずれに,いずれにせよ...<BR>最終的にはこちらが<BR>勝たないとな,不管怎样...<BR>最终<BR>我们必须得赢
-1-09.txt,353,真上セリフ◇それじゃ,<TYPE interval=60>それじゃ..　僕...<BR>先にセンターの方に<BR>行ってますから！,<TYPE interval=60>那.. 我...<BR>先去中心那边<BR>了！
+1-09.txt,353,真上セリフ◇それじゃ,<TYPE interval=60>それじゃ..　僕...<BR>先にセンターの方に<BR>行ってますから！,<TYPE interval=60>那..　我...<BR>先去中心那边<BR>了！
 1-09.txt,365,水滝セリフ◇若い,<TYPE interval=75>真上君...<BR>若いなあ,<TYPE interval=75>真上君...<BR>真年轻啊
 1-09.txt,375,津名川セリフ◇テス,高宮研が..<BR>実戦テストかぁ,高宫研..<BR>实战测试啊
-1-09.txt,379,津名川セリフ◇うちも,ホント...　うちも<BR>がんばらないとね,真的... 我们<BR>也得加油才行呢
+1-09.txt,379,津名川セリフ◇うちも,ホント...　うちも<BR>がんばらないとね,真的...　我们<BR>也得加油才行呢
 1-10.txt,33,エマセリフ◇ふー,<TYPE interval=88>ふぅ<TYPE interval=70>･･････,<TYPE interval=88>呼<TYPE interval=70>･･････
 1-10.txt,51,津名川セリフ◇よく,よくがんばったね,辛苦了
 1-10.txt,55,津名川セリフ◇みんな,みんな..シャワーを浴びて..<BR>着替えておいで,大家..去冲个澡..<BR>换身衣服吧
-1-10.txt,76,鄭セリフ◇データ,<TYPE interval=65>データは..全部解析に<BR>回しておきました,<TYPE interval=65>数据･･････已经全部送去<BR>解析了
+1-10.txt,76,鄭セリフ◇データ,<TYPE interval=65>データは..全部解析に<BR>回しておきました,<TYPE interval=65>数据..已经全部送去<BR>解析了
 1-10.txt,82,鄭セリフ◇大丈夫,<TYPE interval=65>大丈夫ですよね,<TYPE interval=65>应该没问题吧
-1-10.txt,86,津名川セリフ◇うんわかった,<TYPE interval=77>うん..　分かった...<BR>ありがとう,<TYPE interval=77>嗯･･････知道了･･････<BR>谢谢
-1-10.txt,102,真上セリフ◇パワー,<TYPE interval=70>主任...<BR>パワーグラフ..見ますか？,<TYPE interval=70>主任･･････<BR>要看一下功率图吗？
-1-10.txt,108,真上セリフ◇三次元マップ,<TYPE interval=67>３次元マップは.<BR>まだですけど,<TYPE interval=67>三维地图･･････<BR>还没出来呢
+1-10.txt,86,津名川セリフ◇うんわかった,<TYPE interval=77>うん..　分かった...<BR>ありがとう,<TYPE interval=77>嗯..　知道了...<BR>谢谢
+1-10.txt,102,真上セリフ◇パワー,<TYPE interval=70>主任...<BR>パワーグラフ..見ますか？,<TYPE interval=70>主任...<BR>要看一下功率图吗？
+1-10.txt,108,真上セリフ◇三次元マップ,<TYPE interval=67>３次元マップは.<BR>まだですけど,<TYPE interval=67>三维地图.<BR>还没出来呢
 1-10.txt,114,津名川セリフ◇ああ,<TYPE interval=0>ああ,<TYPE interval=0>嗯
-1-10.txt,139,津名川セリフ◇ホント,ホントだ<TYPE interval=70>･･･,真的啊<TYPE interval=70>･･････
-1-10.txt,145,津名川セリフ◇調子,<TYPE interval=65>調子...良かったみたいだね,<TYPE interval=65>状态･･････好像很不错呢
+1-10.txt,139,津名川セリフ◇ホント,ホントだ<TYPE interval=70>･･･,真的啊<TYPE interval=70>･･･
+1-10.txt,145,津名川セリフ◇調子,<TYPE interval=65>調子...良かったみたいだね,<TYPE interval=65>状态...好像很不错呢
 1-10.txt,149,真上セリフ◇特に,<TYPE interval=77>特に反応速度はいいです,<TYPE interval=77>特别是反应速度非常出色
 1-10.txt,162,真上セリフ◇なじんで,<TYPE interval=68>馴染んで<BR>きてるんですかね,<TYPE interval=68>看来是逐渐<BR>适应了呢
-1-10.txt,167,津名川セリフ◇高速,<TYPE interval=68>高速神経ネットは...<BR>後付けデバイスだし,<TYPE interval=68>高速神经网･･････<BR>毕竟是后加装的设备
-1-10.txt,173,津名川セリフ◇これ対数,<TYPE interval=67>これ...対数グラフで<BR>出せるかい？,<TYPE interval=67>这个･･････能用对数图<BR>显示出来吗？
-1-10.txt,177,津名川セリフ◇あと微分,<TYPE interval=77>あと..微分グラフも,<TYPE interval=77>还有･･････微分图也要
+1-10.txt,167,津名川セリフ◇高速,<TYPE interval=68>高速神経ネットは...<BR>後付けデバイスだし,<TYPE interval=68>高速神经网...<BR>毕竟是后加装的设备
+1-10.txt,173,津名川セリフ◇これ対数,<TYPE interval=67>これ...対数グラフで<BR>出せるかい？,<TYPE interval=67>这个...能用对数图<BR>显示出来吗？
+1-10.txt,177,津名川セリフ◇あと微分,<TYPE interval=77>あと..微分グラフも,<TYPE interval=77>还有..微分图也要
 1-10.txt,197,真上セリフ◇変化,変化<TYPE interval=60>･･････,变化<TYPE interval=60>･･････
 1-10.txt,205,真上セリフ◇かなり,<TYPE interval=77>かなり複雑ですよね,<TYPE interval=77>相当复杂呢
 1-10.txt,220,津名川セリフ◇やっぱり,<TYPE interval=60>･･････</TYPE>やっぱり<BR>安定してないね,<TYPE interval=60>･･････</TYPE>果然<BR>不太稳定呢
 1-10.txt,226,真上セリフ◇ずっと,<TYPE interval=78>ずっとブレが出てる<BR>感じですよね,<TYPE interval=78>感觉一直<BR>存在波动呢
-1-10.txt,237,真上セリフ◇右肩,<TYPE interval=65>ずっと右肩上がりで<BR>来てるから...仕方ないですよ,<TYPE interval=65>毕竟数据一路走高･･････<BR>这也是没办法的事
-1-10.txt,243,津名川セリフ◇科学者,<TYPE interval=65>科学者が仕方ないって言っても...<BR>それこそ「仕方ない」.んじゃないかな？,<TYPE interval=65>身为科学家却说没办法･･････<BR>那才真的是“没办法”了吧？
+1-10.txt,237,真上セリフ◇右肩,<TYPE interval=65>ずっと右肩上がりで<BR>来てるから...仕方ないですよ,<TYPE interval=65>毕竟数据一路走高<BR>这也是...没办法的事
+1-10.txt,243,津名川セリフ◇科学者,<TYPE interval=65>科学者が仕方ないって言っても...<BR>それこそ「仕方ない」.んじゃないかな？,<TYPE interval=65>身为科学家却说没办法...<BR>那才真的是.“没办法”了吧？
 1-10.txt,247,真上セリフ◇すみません,<TYPE interval=90>すみません,<TYPE interval=90>抱歉
-1-10.txt,257,津名川セリフ◇確かに,<TYPE interval=70>とは言え..　確かに<BR>今は見守るしか..<BR>手がないかもしれないな,<TYPE interval=70>话虽如此･･････确实<BR>现在除了静观其变･･････<BR>可能也无计可施了
-1-10.txt,261,品藤セリフ◇津な,主任<TYPE interval=60>･･････</TYPE><BR>..あ,主任<TYPE interval=60>･･････</TYPE><BR>･･････啊
+1-10.txt,257,津名川セリフ◇確かに,<TYPE interval=70>とは言え..　確かに<BR>今は見守るしか..<BR>手がないかもしれないな,<TYPE interval=70>话虽如此..　确实<BR>现在除了静观其变..<BR>可能也无计可施了
+1-10.txt,261,品藤セリフ◇津な,主任<TYPE interval=60>･･････</TYPE><BR>..あ,主任<TYPE interval=60>･･････</TYPE><BR>..啊
 1-10.txt,277,津名川セリフ◇ん,",<TYPE interval=0>ん？",",<TYPE interval=0>嗯？"
-1-10.txt,294,品藤セリフ◇津名川さん,"津名川さん,<BR>データシート<TYPE interval=70>･･････</TYPE>...<BR>これでいいんですよね？","津名川先生,<BR>数据表<TYPE interval=70>･･････</TYPE>･･････<BR>这样可以吧？"
+1-10.txt,294,品藤セリフ◇津名川さん,"津名川さん,<BR>データシート<TYPE interval=70>･･････</TYPE>...<BR>これでいいんですよね？","津名川先生,<BR>数据表<TYPE interval=70>･･････</TYPE>...<BR>这样可以吧？"
 1-10.txt,299,津名川セリフ◇ああ,<TYPE interval=0><FONT size=15>ああ,<TYPE interval=0><FONT size=15>嗯
-1-10.txt,303,津名川セリフ◇あり,ありがとう..<BR>品<TYPE interval=60>･･････..</TYPE>藤さん,谢谢･･････<BR>品<TYPE interval=60>･･････</TYPE>藤
+1-10.txt,303,津名川セリフ◇あり,ありがとう..<BR>品<TYPE interval=60>･･････..</TYPE>藤さん,谢谢..<BR>品<TYPE interval=60>･･････..</TYPE>藤
 1-10.txt,314,品藤セリフ◇いえ,<TYPE interval=20>いえ？,<TYPE interval=20>哎？
 1-10.txt,318,品藤セリフ◇失礼,"<TYPE interval=50>･･････</TYPE>それでは,<BR>失礼します","<TYPE interval=50>･･････</TYPE>那么,<BR>我先失陪了"
 1-10.txt,337,真上セリフ◇はー,<FONT size=20>は<TYPE interval=300 style=Spring speed=300>～.,<FONT size=20>是<TYPE interval=300 style=Spring speed=300>〜。
 1-10.txt,343,真上セリフ◇品藤さん,"<TYPE interval=130><FONT size=17>品藤さん,<BR><TYPE interval=80>やっぱかわいいすね～.","<TYPE interval=130><FONT size=17>品藤小姐,<BR><TYPE interval=80>果然还是很可爱呢〜."
 1-10.txt,348,選択◇そうかい,<TYPE interval=0><FONT color=red>そうかい,<TYPE interval=0><FONT color=red>是吗
 1-10.txt,349,選択◇うん,<TYPE interval=0><FONT color=red>うん･･････<BR>かわいいよね,<TYPE interval=0><FONT color=red>嗯･･････<BR>很可爱吧
-1-10.txt,371,津名川セリフ◇じゃ,<FONT size=15><TYPE interval=90>じゃあ...<BR>後..　頼むよ,<FONT size=15><TYPE interval=90>那就･･････<BR>后面･･････就拜托你了
+1-10.txt,371,津名川セリフ◇じゃ,<FONT size=15><TYPE interval=90>じゃあ...<BR>後..　頼むよ,<FONT size=15><TYPE interval=90>那就...<BR>后面..　就拜托你了
 1-10.txt,376,津名川セリフ◇整理,"<FONT size=15><TYPE interval=80>整理とデータ解析の詳しいの,<BR>それから血液検査と","<FONT size=15><TYPE interval=80>详细的整理与数据分析,<BR>以及血液检查"
 1-10.txt,381,真上セリフ◇はい,<FONT size=15>はい,<FONT size=15>好的
 1-10.txt,385,津名川セリフ◇結果,<TYPE interval=90><FONT size=15>結果が出たら<RUBY text='ウェン'>文 </RUBY>のとまとめて...<BR>うちのほうに送っておいてくれ,<TYPE interval=90><FONT size=15>结果出来的话，和文的一起汇总...<BR>发到我这边来吧
 1-10.txt,389,真上セリフ◇わかり,<TYPE interval=90><FONT size=15>分かりました,<TYPE interval=90><FONT size=15>明白了
 1-10.txt,412,津名川セリフ◇そうかい,<TYPE interval=90>そうかい？,<TYPE interval=90>是吗？
 1-10.txt,419,真上セリフ◇そうです,"<TYPE interval=90>そうですよ～</TYPE>,<BR><TYPE interval=90>ひそかにファン多いですし</TYPE>","<TYPE interval=90>那当然〜</TYPE>,<BR><TYPE interval=90>毕竟她私底下粉丝可不少呢</TYPE>"
-1-10.txt,423,真上セリフ◇しかも,<TYPE interval=80>しかもフリー.って<BR>うわさですし,<TYPE interval=80>而且据说她<BR>还是单身呢
-1-10.txt,428,津名川セリフ◇･･････,"<TYPE interval=60>･･････</TYPE>,そうなんだ",<TYPE interval=60>･･････</TYPE>，这样啊
-1-10.txt,454,津名川セリフ◇うん,うん<TYPE interval=50>･･････</TYPE>...<BR>かわいいよね,嗯<TYPE interval=50>･･････</TYPE>･･････<BR>确实挺可爱的呢
+1-10.txt,423,真上セリフ◇しかも,<TYPE interval=80>しかもフリー.って<BR>うわさですし,<TYPE interval=80>而且.据说她<BR>还是单身呢
+1-10.txt,428,津名川セリフ◇･･････,"<TYPE interval=60>･･････</TYPE>,そうなんだ","<TYPE interval=60>･･････</TYPE>,这样啊"
+1-10.txt,454,津名川セリフ◇うん,うん<TYPE interval=50>･･････</TYPE>...<BR>かわいいよね,嗯<TYPE interval=50>･･････</TYPE>...<BR>确实挺可爱的呢
 1-10.txt,466,真上セリフ◇へえ,へえ<TYPE interval=50>･･････,哦<TYPE interval=50>･･････
-1-10.txt,473,津名川セリフ◇ん,<TYPE interval=110>ん？...<BR>何だい,<TYPE interval=110>嗯？･･････<BR>怎么了
-1-10.txt,479,真上セリフ◇いえ,"<TYPE interval=90>いえ,　主任の口から...<BR>そんな言葉が出るなんて..<BR>意外だなあ</TYPE><TYPE interval=50>･･････...って",<TYPE interval=90>没，只是没想到主任･･････<BR>居然会说出这种话･･････<BR>真让人意外呢</TYPE><TYPE interval=50>･･････啦
-1-10.txt,489,津名川セリフ◇はは,"はは<TYPE interval=50>･･････</TYPE>,素直に<BR>そう思っただけさ<TYPE interval=50>･･････",哈哈<TYPE interval=50>･･････</TYPE>，我只是<BR>单纯这么觉得而已<TYPE interval=50>･･････
+1-10.txt,473,津名川セリフ◇ん,<TYPE interval=110>ん？...<BR>何だい,<TYPE interval=110>嗯？...<BR>怎么了
+1-10.txt,479,真上セリフ◇いえ,"<TYPE interval=90>いえ,　主任の口から...<BR>そんな言葉が出るなんて..<BR>意外だなあ</TYPE><TYPE interval=50>･･････...って",<TYPE interval=90>没，只是没想到主任..<BR>居然会说出这种话..<BR>真让人意外呢</TYPE><TYPE interval=50>･･････...啦
+1-10.txt,489,津名川セリフ◇はは,"はは<TYPE interval=50>･･････</TYPE>,素直に<BR>そう思っただけさ<TYPE interval=50>･･････","哈哈<TYPE interval=50>･･････</TYPE>,我只是<BR>单纯这么觉得而已<TYPE interval=50>･･････"
 1-11.txt,28,Ａセリフ◇大丈夫,<TYPE interval=110>大丈夫ですかね,<TYPE interval=110>没问题吧
-1-11.txt,36,Ａセリフ◇いくら,いくら偽装してる<BR>.っていっても,再怎么说是伪装<BR>･･････
-1-11.txt,40,Ｂセリフ◇うちの,ウチのボスも...<BR>無茶な事をやるよな,咱们老大也･･････<BR>真敢乱来啊
-1-11.txt,44,Ｂセリフ◇真相,真相が知れたら..<BR>国際問題どころじゃないぜ,要是真相败露･･････<BR>那可就不止是国际问题了
-1-11.txt,48,Ｂセリフ◇ま,"<TYPE interval=90>ま,　そんなこと...<BR>あるはずないがな",<TYPE interval=90>嘛，那种事･･････<BR>也不可能发生
-1-11.txt,62,Ａセリフ◇後始末,<TYPE interval=90>後始末は..<BR>どうするんです,<TYPE interval=90>那善后･･････<BR>怎么处理
-1-11.txt,66,Ｂセリフ◇後始末も,後始末も何も....<BR>建物ごとなくなっちまうだろ,还管什么善后･･････<BR>到时候连建筑都会一起没了吧
+1-11.txt,36,Ａセリフ◇いくら,いくら偽装してる<BR>.っていっても,再怎么说是伪装<BR>.･･････
+1-11.txt,40,Ｂセリフ◇うちの,ウチのボスも...<BR>無茶な事をやるよな,咱们老大也...<BR>真敢乱来啊
+1-11.txt,44,Ｂセリフ◇真相,真相が知れたら..<BR>国際問題どころじゃないぜ,要是真相败露..<BR>那可就不止是国际问题了
+1-11.txt,48,Ｂセリフ◇ま,"<TYPE interval=90>ま,　そんなこと...<BR>あるはずないがな",<TYPE interval=90>嘛，那种事...<BR>也不可能发生
+1-11.txt,62,Ａセリフ◇後始末,<TYPE interval=90>後始末は..<BR>どうするんです,<TYPE interval=90>那善后..<BR>怎么处理
+1-11.txt,66,Ｂセリフ◇後始末も,後始末も何も....<BR>建物ごとなくなっちまうだろ,还管什么善后....<BR>到时候连建筑都会一起没了吧
 1-11.txt,70,Ｂセリフ◇それまで,それまでのデータ取りが<BR>俺達の仕事さ,我们要做的，就是在那之前<BR>把数据弄到手
-1-11.txt,84,Ａセリフ◇作戦,"こんな作戦までやって,<BR>あの組織...　何作ってるんですか","都动用这种规模的行动了,<BR>那个组织･･････到底在造什么啊"
+1-11.txt,84,Ａセリフ◇作戦,"こんな作戦までやって,<BR>あの組織...　何作ってるんですか","都动用这种规模的行动了,<BR>那个组织...　到底在造什么啊"
 1-11.txt,90,Ｂセリフ◇さあね,さあね,谁知道呢
 1-11.txt,94,Ｂセリフ◇またしかに,"ま,<BR>確かなのは","不过,<BR>能确定的是"
-1-11.txt,98,Ｂセリフ◇作戦,これが終わっちまえば...<BR>奴らはもう..　ウチに頼るしか<BR>なくなるってことだ,等这事一了结･･････<BR>那帮家伙就･･････<BR>只能指望咱们了
-1-12.txt,17,津名川セリフ◇でかい,でかいコンテナだな,好大的集装箱啊。
+1-11.txt,98,Ｂセリフ◇作戦,これが終わっちまえば...<BR>奴らはもう..　ウチに頼るしか<BR>なくなるってことだ,等这事一了结...<BR>那帮家伙就..　<BR>只能指望咱们了
+1-12.txt,17,津名川セリフ◇でかい,でかいコンテナだな,好大的集装箱啊
 1-12.txt,23,津名川セリフ◇さて,さて<TYPE interval=60>･･････,好了<TYPE interval=60>･･････
-1-12.txt,33,津名川セリフ◇あの子,<TYPE interval=77>あの子たちの準備が整うまで...<BR>少し時間があるな<TYPE interval=60>･･････,<TYPE interval=77>在那帮孩子准备好之前･･････<BR>还有点时间呢<TYPE interval=60>･･････
+1-12.txt,33,津名川セリフ◇あの子,<TYPE interval=77>あの子たちの準備が整うまで...<BR>少し時間があるな<TYPE interval=60>･･････,<TYPE interval=77>在那帮孩子准备好之前...<BR>还有点时间呢<TYPE interval=60>･･････
 1-12.txt,49,津名川セリフ◇もう少し,<TYPE interval=75>もう少し時間があるな<TYPE interval=70>･･････,<TYPE interval=75>还有点时间呢<TYPE interval=70>･･････
 1-12.txt,78,選択Ａ◇久しぶり,<TYPE interval=0><FONT color=red>久しぶりに品藤と<BR>話をするのもいいかな</FONT></TYPE>,<TYPE interval=0><FONT color=red>久违地和品藤<BR>聊聊也不错吧</FONT></TYPE>
 1-12.txt,83,選択Ｂ◇発注,<TYPE interval=0><FONT color=red>発注した戦闘装備の様子を<BR>聞きに行くか,<TYPE interval=0><FONT color=red>去问问订购的战斗装备<BR>进展如何吧
 1-12.txt,88,選択Ｃ◇頼んでいた,<TYPE interval=0><FONT color=red>頼んでいた薬が<BR>もう出来ている頃かもしれない,<TYPE interval=0><FONT color=red>拜托做的药<BR>差不多该做好了吧
-1-12.txt,188,説明◇情報センター,"<FONT size=21 color=white><TYPE interval=65>古痕全体の情報を管理しているセンター。,..<BR>何か問題が起こったらとりあえずここへ、..と言う位置付けか。,..<BR>レベルの低い問題からトップレベルの機密まで管理している。,..<BR>ここの部長をしている品藤は、...もしかするとこの組織を...<BR>誰よりも知っているのかも知れない。</TYPE>",<FONT size=21 color=white><TYPE interval=65>管理着整个古痕情报的中心...<BR>一旦出了什么问题，先到这里来...大概就是这样的定位吧...<BR>从低级别的问题到最高级别的机密，全都由这里管理...<BR>担任这里部长的品藤...或许比任何人都更了解这个组织也说不定。</TYPE>
-1-12.txt,205,津名川セリフ◇知らない,<TYPE interval=60>知らない顔ばかりだ,<TYPE interval=60>全是不认识的面孔啊。
-1-12.txt,211,津名川セリフ◇品藤さん,<TYPE interval=80>品藤さん...<TYPE interval=60>･･････</TYPE>は.<BR>いるかな,<TYPE interval=80>品藤小姐･･････<TYPE interval=60>･･････</TYPE>在<BR>不在呢。
-1-12.txt,218,スタッフセリフ◇あ,<TYPE interval=75>あ...　はい..<BR>部長ですか..<BR>えーと<TYPE interval=60>･･････,<TYPE interval=75>啊･･････ 是的･･････<BR>您找部长吗･･････<BR>那个<TYPE interval=60>･･････
-1-12.txt,222,スタッフセリフ◇えーと,<TYPE interval=65>たぶん<BR>...資料室の方にいると.<BR>思いますけど,<TYPE interval=65>应该<BR>･･････在资料室那边<BR>吧。
-1-12.txt,225,スタッフセリフ◇右奥の,<TYPE interval=80>右奥の方です,<TYPE interval=80>在右后方。
-1-12.txt,234,スタッフセリフ◇引越しが,<TYPE interval=60>引越しがまだ終わってなくて...<BR>ここのところ毎日こもって.<BR>整理しているんです,<TYPE interval=60>搬家还没弄完･･････<BR>这几天每天都窝在里面<BR>整理东西呢。
-1-12.txt,238,津名川セリフ◇ありが,ありがとう,谢谢。
-1-12.txt,263,津名川セリフ◇やあ,"<TYPE interval=50>･･････</TYPE>やあ<BR>,お久しぶり",<TYPE interval=50>･･････</TYPE>哟<BR>好久不见。
+1-12.txt,188,説明◇情報センター,"<FONT size=21 color=white><TYPE interval=65>古痕全体の情報を管理しているセンター。,..<BR>何か問題が起こったらとりあえずここへ、..と言う位置付けか。,..<BR>レベルの低い問題からトップレベルの機密まで管理している。,..<BR>ここの部長をしている品藤は、...もしかするとこの組織を...<BR>誰よりも知っているのかも知れない。</TYPE>","<FONT size=21 color=white><TYPE interval=65>管理着整个古痕情报的中心。,...<BR>一旦出了什么问题，先到这里来,..大概就是这样的定位吧。,..<BR>从低级别的问题到最高级别的机密，全都由这里管理。,..<BR>担任这里部长的品藤...或许比任何人都更了解这个组织也说不定。</TYPE>"
+1-12.txt,205,津名川セリフ◇知らない,<TYPE interval=60>知らない顔ばかりだ,<TYPE interval=60>全是不认识的面孔啊
+1-12.txt,211,津名川セリフ◇品藤さん,<TYPE interval=80>品藤さん...<TYPE interval=60>･･････</TYPE>は.<BR>いるかな,<TYPE interval=80>品藤小姐...<TYPE interval=60>･･････</TYPE>在<BR>不在呢
+1-12.txt,218,スタッフセリフ◇あ,<TYPE interval=75>あ...　はい..<BR>部長ですか..<BR>えーと<TYPE interval=60>･･････,<TYPE interval=75>啊... 是的..<BR>您找部长吗..<BR>那个<TYPE interval=60>･･････
+1-12.txt,222,スタッフセリフ◇えーと,<TYPE interval=65>たぶん<BR>...資料室の方にいると.<BR>思いますけど,<TYPE interval=65>应该<BR>...在资料室那边.<BR>吧
+1-12.txt,225,スタッフセリフ◇右奥の,<TYPE interval=80>右奥の方です,<TYPE interval=80>在右后方
+1-12.txt,234,スタッフセリフ◇引越しが,<TYPE interval=60>引越しがまだ終わってなくて...<BR>ここのところ毎日こもって.<BR>整理しているんです,<TYPE interval=60>搬家还没弄完...<BR>这几天每天都窝在里面.<BR>整理东西呢
+1-12.txt,238,津名川セリフ◇ありが,ありがとう,谢谢
+1-12.txt,263,津名川セリフ◇やあ,"<TYPE interval=50>･･････</TYPE>やあ<BR>,お久しぶり",<TYPE interval=50>･･････</TYPE>哟<BR>好久不见
 1-12.txt,276,品藤セリフ◇あら,"<TYPE interval=80>あら,<BR>会いにきてくれたの？","<TYPE interval=80>哎呀,<BR>来看我了吗？"
-1-12.txt,282,品藤セリフ◇お久しぶり,<TYPE interval=90>もう..一年ぶり<BR>くらいかしら,<TYPE interval=90>大概･･････有一年<BR>没见了吧。
+1-12.txt,282,品藤セリフ◇お久しぶり,<TYPE interval=90>もう..一年ぶり<BR>くらいかしら,<TYPE interval=90>大概..有一年<BR>没见了吧
 1-12.txt,286,津名川セリフ◇元気,元気？,最近好吗？
-1-12.txt,302,品藤セリフ◇ええ,"<TYPE interval=90>ええ　<BR>,あなたも元気そう",<TYPE interval=90>嗯<BR>你看上去也挺好。
+1-12.txt,302,品藤セリフ◇ええ,"<TYPE interval=90>ええ　<BR>,あなたも元気そう",<TYPE interval=90>嗯<BR>你看上去也挺好
 1-12.txt,306,津名川セリフ◇そうかな,そうかな,有吗
 1-12.txt,312,品藤セリフ◇うん,"うん<TYPE interval=50>･･････</TYPE><BR>,<TYPE interval=90>新しい施設には慣れた？","嗯<TYPE interval=50>･･････</TYPE><BR>,<TYPE interval=90>新设施还习惯吗？"
-1-12.txt,316,津名川セリフ◇まあ,まあ...　それなりに,嘛･･････ 还行吧。
-1-12.txt,320,津名川セリフ◇そんなに,そんなに使う場所も<BR>ないからね,毕竟也没什么<BR>需要用的地方。
+1-12.txt,316,津名川セリフ◇まあ,まあ...　それなりに,嘛...　还行吧
+1-12.txt,320,津名川セリフ◇そんなに,そんなに使う場所も<BR>ないからね,毕竟也没什么<BR>需要用的地方
 1-12.txt,338,津名川セリフ◇今,今　どうしてるの？,最近怎么样？
 1-12.txt,344,品藤セリフ◇なにが,なにが？,指什么？
-1-12.txt,350,津名川セリフ◇いや,<TYPE interval=75>いや...　いい人でも..<BR>できたかなってさ,<TYPE interval=75>没･･････ 就是想着有没有<BR>遇到什么好对象呢。
+1-12.txt,350,津名川セリフ◇いや,<TYPE interval=75>いや...　いい人でも..<BR>できたかなってさ,<TYPE interval=75>没...　就是想着有没有..<BR>遇到什么好对象呢
 1-12.txt,354,品藤セリフ◆どうかしら,"<TYPE interval=90>どうかしら,<BR>あなたは？","<TYPE interval=90>谁知道呢,<BR>你呢？"
 1-12.txt,365,選択◇あの子,<TYPE interval=0><FONT color=red>あの子たちで<BR>手一杯だよ,<TYPE interval=0><FONT color=red>光是照顾那些孩子<BR>就够我忙的了
 1-12.txt,366,選択◇さあ,<TYPE interval=0><FONT color=red>さあ,<TYPE interval=0><FONT color=red>好了
 1-12.txt,367,選択◇いるよ,<TYPE interval=0><FONT color=red>いるよ,<TYPE interval=0><FONT color=red>有啊
 1-12.txt,393,品藤セリフ◇そうね,"そうね<BR>,<TYPE interval=50>･･････</TYPE>でも","也是呢<BR>,<TYPE interval=50>･･････</TYPE>不过"
-1-12.txt,399,品藤セリフ◇あなたは,<TYPE interval=90>あなたは一人で<BR>作っちゃったけど....<BR>私は相手がいないの,<TYPE interval=90>你虽然是一个人<BR>弄出来的･･････<BR>但我连个对象都没有呢。
-1-12.txt,403,津名川セリフ◇そうか,<TYPE interval=50>･･････</TYPE>そうか,<TYPE interval=50>･･････</TYPE>这样啊。
-1-12.txt,415,品藤セリフ◇あいかわらず,<TYPE interval=90>あいかわらず.<BR>かわいいのね,<TYPE interval=90>还是老样子.<BR>真可爱呢。
-1-12.txt,419,津名川セリフ◇そうだね,そうだね...<BR>ときどき自分でも<BR>親バカかと思うよ,是啊･･････<BR>有时候连我自己都<BR>觉得是个溺爱孩子的笨蛋家长呢。
+1-12.txt,399,品藤セリフ◇あなたは,<TYPE interval=90>あなたは一人で<BR>作っちゃったけど....<BR>私は相手がいないの,<TYPE interval=90>你虽然是一个人<BR>弄出来的....<BR>但我连个对象都没有呢
+1-12.txt,403,津名川セリフ◇そうか,<TYPE interval=50>･･････</TYPE>そうか,<TYPE interval=50>･･････</TYPE>这样啊
+1-12.txt,415,品藤セリフ◇あいかわらず,<TYPE interval=90>あいかわらず.<BR>かわいいのね,<TYPE interval=90>还是老样子.<BR>真可爱呢
+1-12.txt,419,津名川セリフ◇そうだね,そうだね...<BR>ときどき自分でも<BR>親バカかと思うよ,是啊...<BR>有时候连我自己都<BR>觉得是个溺爱孩子的笨蛋家长呢
 1-12.txt,427,品藤セリフ◇ううん,<TYPE interval=90>ううん,<TYPE interval=90>不会啊。
 1-12.txt,431,津名川セリフ◇え？,え？,诶？
 1-12.txt,435,品藤セリフ◇あなたの,<TYPE interval=90>あなたのことよ,<TYPE interval=90>说的是你呀
-1-12.txt,439,品藤セリフ◇なんか,"な～んか..<BR>また<TYPE interval=60>･･････</TYPE>,ううん...<BR><TYPE interval=80>なんでもないや",总觉得･･････<BR>又<TYPE interval=60>･･････</TYPE>，不对･･････<BR><TYPE interval=80>没什么
-1-12.txt,454,津名川セリフ◇仕事,<TYPE interval=50>･･････</TYPE>仕事..<BR>邪魔してごめんね,<TYPE interval=50>･･････</TYPE>工作･･････<BR>打扰你了吧
-1-12.txt,460,品藤セリフ◇ねえ,"ううん,<BR>ねえ...　津名川くん","没有啦,<BR>我说･･････津名川君"
-1-12.txt,464,品藤セリフ◇いろんなこと,いろんなこと...<BR>まだ覚えてる？,各种事情･･････<BR>还记得吗？
-1-12.txt,468,津名川セリフ◇全部,<TYPE interval=110>覚えてるよ...<BR>全部,<TYPE interval=110>记得哦･･････<BR>全都记得
-1-12.txt,483,品藤セリフ◇そう,そう...<BR><TYPE interval=56>それならそれで良し！,这样啊･･････<BR><TYPE interval=56>那就好！
+1-12.txt,439,品藤セリフ◇なんか,"な～んか..<BR>また<TYPE interval=60>･･････</TYPE>,ううん...<BR><TYPE interval=80>なんでもないや","总觉得..<BR>又<TYPE interval=60>･･････</TYPE>,不对...<BR><TYPE interval=80>没什么"
+1-12.txt,454,津名川セリフ◇仕事,<TYPE interval=50>･･････</TYPE>仕事..<BR>邪魔してごめんね,<TYPE interval=50>･･････</TYPE>工作..<BR>打扰到你了吧
+1-12.txt,460,品藤セリフ◇ねえ,"ううん,<BR>ねえ...　津名川くん","没有啦,<BR>我说...　津名川君"
+1-12.txt,464,品藤セリフ◇いろんなこと,いろんなこと...<BR>まだ覚えてる？,各种事情...<BR>还记得吗？
+1-12.txt,468,津名川セリフ◇全部,<TYPE interval=110>覚えてるよ...<BR>全部,<TYPE interval=110>记得哦...<BR>全都记得
+1-12.txt,483,品藤セリフ◇そう,そう...<BR><TYPE interval=56>それならそれで良し！,这样啊...<BR><TYPE interval=56>那就好！
 1-12.txt,489,津名川セリフ◇いいのかい,<TYPE interval=80>いいのかい？,<TYPE interval=80>这样好吗？
 1-12.txt,493,品藤セリフ◇充分,<TYPE interval=80>いいのよ,<TYPE interval=80>没关系啦
 1-12.txt,497,津名川セリフ◇そうか,<TYPE interval=90>そうか,<TYPE interval=90>这样啊
@@ -332,117 +332,83 @@ SELECT.txt,14,選択13,おまけ,Extra
 1-12.txt,558,品藤セリフ◇そう,そう,这样啊
 1-12.txt,565,品藤セリフ◇変わったね,"<TYPE interval=90>変わったね,<BR>津名川くん","<TYPE interval=90>你变了呢,<BR>津名川君"
 1-12.txt,569,津名川セリフ◇かな,そうかな,有吗
-1-12.txt,575,品藤セリフ◇うん少し,"<TYPE interval=90>うん,　少し<BR>頼もしくなった....<BR>お父さんだし",<TYPE interval=90>嗯，变得<BR>稍微可靠了些･･････<BR>毕竟都是父亲了嘛
-1-12.txt,586,品藤セリフ◇私も,<TYPE interval=50>･･････</TYPE><TYPE interval=75>私も<BR>..子供ほしかったな,<TYPE interval=50>･･････</TYPE><TYPE interval=75>我也<BR>･･････想要个孩子呢
-1-12.txt,590,津名川セリフ◇作れば,<TYPE interval=65>作ればいいじゃないか....<BR>これから,<TYPE interval=65>以后生一个不就好了嘛･･････<BR>从现在开始
+1-12.txt,575,品藤セリフ◇うん少し,"<TYPE interval=90>うん,　少し<BR>頼もしくなった....<BR>お父さんだし","<TYPE interval=90>嗯,　变得<BR>稍微可靠了些....<BR>毕竟都是父亲了嘛"
+1-12.txt,586,品藤セリフ◇私も,<TYPE interval=50>･･････</TYPE><TYPE interval=75>私も<BR>..子供ほしかったな,<TYPE interval=50>･･････</TYPE><TYPE interval=75>我也<BR>..想要个孩子呢
+1-12.txt,590,津名川セリフ◇作れば,<TYPE interval=65>作ればいいじゃないか....<BR>これから,<TYPE interval=65>以后生一个不就好了嘛....<BR>从现在开始
 1-12.txt,609,津名川セリフ◇いるよ,いるよ,有啊
-1-12.txt,632,品藤セリフ◇そうよね,"<TYPE interval=90>そうよね　,津名川くん...<BR>もてそうだから",<TYPE interval=90>也是呢，津名川君･･････<BR>毕竟你看起来挺受欢迎的
+1-12.txt,632,品藤セリフ◇そうよね,"<TYPE interval=90>そうよね　,津名川くん...<BR>もてそうだから","<TYPE interval=90>也是呢　,津名川君...<BR>毕竟你看起来挺受欢迎的"
 1-12.txt,638,津名川セリフ◇そうかい,そうかい？,是吗？
-1-12.txt,644,品藤セリフ◇ええ,"<TYPE interval=90>ええ,　センターの子達も<BR>あなたのこと話してたわよ",<TYPE interval=90>嗯，中心的女孩们<BR>也在议论你哦
+1-12.txt,644,品藤セリフ◇ええ,"<TYPE interval=90>ええ,　センターの子達も<BR>あなたのこと話してたわよ","<TYPE interval=90>嗯,　中心的女孩们<BR>也在议论你哦"
 1-12.txt,648,品藤セリフ◇かわいい,<TYPE interval=80>かわいい...って,<TYPE interval=80>说你很･･････可爱
-1-12.txt,661,津名川セリフ◇はは,はは<TYPE interval=60>･･････</TYPE>...　どう<BR>リアクションしていいのかな,哈哈<TYPE interval=60>･･････</TYPE>･･････ 我<BR>该怎么反应才好呢
+1-12.txt,661,津名川セリフ◇はは,はは<TYPE interval=60>･･････</TYPE>...　どう<BR>リアクションしていいのかな,哈哈<TYPE interval=60>･･････</TYPE>...　我<BR>该怎么反应才好呢
 1-12.txt,665,品藤セリフ◇ふふ,<TYPE interval=70>ふふっ,<TYPE interval=70>呵呵
-1-12.txt,674,品藤セリフ◇でも,"でも,　津名川くん..<BR><TYPE interval=60>･･････</TYPE>もうお父さん...<BR>なんだよね",不过，津名川君･･････<BR><TYPE interval=60>･･････</TYPE>已经是爸爸了･･････<BR>呢
+1-12.txt,674,品藤セリフ◇でも,"でも,　津名川くん..<BR><TYPE interval=60>･･････</TYPE>もうお父さん...<BR>なんだよね",不过，津名川君...<BR><TYPE interval=60>･･････</TYPE>已经是爸爸了...<BR>呢
 1-12.txt,679,津名川セリフ◇うん,<TYPE interval=50>･･････</TYPE>うん,<TYPE interval=50>･･････</TYPE>嗯
-1-12.txt,688,品藤セリフ◇私も,"<TYPE interval=110>私も子供,<BR>欲しかったな",<TYPE interval=110>我也挺想要<BR>个孩子的呢
-1-12.txt,692,津名川セリフ◇作れば,作ればいいじゃないか...<BR>これから,以后生不就好了嘛･･････<BR>从现在开始
+1-12.txt,688,品藤セリフ◇私も,"<TYPE interval=110>私も子供,<BR>欲しかったな","<TYPE interval=110>我也挺想要,<BR>个孩子的呢"
+1-12.txt,692,津名川セリフ◇作れば,作ればいいじゃないか...<BR>これから,以后生不就好了嘛...<BR>从现在开始
 1-12.txt,709,津名川セリフ◇さあ,さあ,好了
-1-12.txt,732,品藤セリフ◇あらら,<TYPE interval=90>あらら...<BR>はぐらかされちゃった<BR>みたいね,<TYPE interval=90>哎呀呀･･････<BR>看来是被<BR>岔开话题了呢
+1-12.txt,732,品藤セリフ◇あらら,<TYPE interval=90>あらら...<BR>はぐらかされちゃった<BR>みたいね,<TYPE interval=90>哎呀呀...<BR>看来是被<BR>岔开话题了呢
 1-12.txt,738,品藤セリフ◇津名,<TYPE interval=90>津名川くんも<BR>すみにはおけないなあ,<TYPE interval=90>津名君也<BR>不能小觑啊
-1-12.txt,742,津名川セリフ◇はは,はは<TYPE interval=50>･･････</TYPE>....<BR>からかわないでくれよ,哈哈<TYPE interval=50>･･････</TYPE>･･････<BR>别开我玩笑了
-1-12.txt,754,品藤セリフ◇でも,"でも,　津名川くん..<BR><TYPE interval=60>･･････</TYPE>もうお父さん...<BR>なんだよね",不过，津名川君･･････<BR><TYPE interval=60>･･････</TYPE>已经是爸爸了･･････<BR>呢
+1-12.txt,742,津名川セリフ◇はは,はは<TYPE interval=50>･･････</TYPE>....<BR>からかわないでくれよ,哈哈<TYPE interval=50>･･････</TYPE>....<BR>别开我玩笑了
+1-12.txt,754,品藤セリフ◇でも,"でも,　津名川くん..<BR><TYPE interval=60>･･････</TYPE>もうお父さん...<BR>なんだよね",不过，津名川君..<BR><TYPE interval=60>･･････</TYPE>已经是爸爸了...<BR>呢
 1-12.txt,759,津名川セリフ◇うん,<TYPE interval=50>･･････</TYPE>うん,<TYPE interval=50>･･････</TYPE>嗯
-1-12.txt,768,品藤セリフ◇私も,"<TYPE interval=110>私も子供,<BR>欲しかったな",<TYPE interval=110>我也挺想要<BR>个孩子的呢
-1-12.txt,772,津名川セリフ◇作れば,作ればいいじゃないか...<BR>これから,以后生不就好了嘛･･････<BR>从现在开始
+1-12.txt,768,品藤セリフ◇私も,"<TYPE interval=110>私も子供,<BR>欲しかったな","<TYPE interval=110>我也挺想,<BR>要个孩子的呢"
+1-12.txt,772,津名川セリフ◇作れば,作ればいいじゃないか...<BR>これから,以后生不就好了嘛...<BR>从现在开始
 1-12.txt,807,上代セリフ◇おっ,"<TYPE interval=80>おっ,<BR>津名じゃないか","<TYPE interval=80>哦,<BR>这不是津名嘛"
 1-12.txt,816,上代セリフ◇テスト,"<TYPE interval=80>テスト終わったんだ,<BR>透花ちゃんらは？","<TYPE interval=80>考试结束了啊,<BR>透花她们呢？"
 1-12.txt,831,津名川セリフ◇お前,<TYPE interval=60>･･････</TYPE><TYPE interval=110>お前も<BR>今日　来てたのか,<TYPE interval=60>･･････</TYPE><TYPE interval=110>你今天<BR>也来了啊
-1-12.txt,837,津名川セリフ◇あの子,あの子らは.まだ実験が<BR>終わったばっかりだから...<BR><TYPE interval=60>･･････</TYPE>シャワー室かな,那几个孩子实验<BR>才刚结束･･････<BR><TYPE interval=60>･･････</TYPE>大概去淋浴间了吧
-1-12.txt,847,上代セリフ◇なんだよ,"<TYPE interval=70>なんだよ～！,<BR>来るなら一緒に来てよ～",<TYPE interval=70>什么嘛〜！<BR>要来就一起过来啊〜
-1-12.txt,851,上代セリフ◇あ～あ,"<TYPE interval=80>あ～あ...　がっかり,..<BR>後で連れて来てよね",<TYPE interval=80>啊〜･･････真扫兴･･････<BR>待会儿可得带过来哦
+1-12.txt,837,津名川セリフ◇あの子,あの子らは.まだ実験が<BR>終わったばっかりだから...<BR><TYPE interval=60>･･････</TYPE>シャワー室かな,那几个孩子实验<BR>才刚结束...<BR><TYPE interval=60>･･････</TYPE>大概去淋浴间了吧
+1-12.txt,847,上代セリフ◇なんだよ,"<TYPE interval=70>なんだよ～！,<BR>来るなら一緒に来てよ～","<TYPE interval=70>什么嘛〜！,<BR>要来就一起过来啊〜"
+1-12.txt,851,上代セリフ◇あ～あ,"<TYPE interval=80>あ～あ...　がっかり,..<BR>後で連れて来てよね","<TYPE interval=80>啊〜...　真扫兴,..<BR>待会儿可得带过来哦"
 1-12.txt,855,津名川セリフ◇はっきり,<TYPE interval=90>はっきりした<BR>ヤツだな,<TYPE interval=90>真是个<BR>直性子啊
 1-12.txt,865,津名川セリフ◇例の,例の頼んでおいたヤツは<BR>どうなった？,之前拜托你的那东西<BR>怎么样了？
-1-12.txt,869,上代セリフ◇あーあれ,"<TYPE interval=80>あー..　あれ,<BR>ダマスカス剣の方は...<BR>そろそろあがりそうだよ","<TYPE interval=80>啊･･････那个,<BR>大马士革剑那边･･････<BR>差不多快完工了"
-1-12.txt,873,上代セリフ◇この間,<TYPE interval=80>この間見てきたけど..<BR>芸術品だね...　ありゃ,<TYPE interval=80>前阵子我去看了一眼･･･<BR>简直是件艺术品啊･･･那东西
-1-12.txt,882,上代セリフ◇ワイヤー,<TYPE interval=80>ワイヤーの方は...<BR>なかなかパワーのあるモーターが<BR>作れなくて..苦労してる<TYPE>,<TYPE interval=80>线缆那边･･････<BR>一直做不出动力够强的马达･･････<BR>费了不少劲<TYPE>
-1-12.txt,886,上代セリフ◇静音,<TYPE interval=70>静音性能も考えると...<BR>リング式のモーターしかない<BR>とは思うんだけどね,<TYPE interval=70>不过考虑到静音性能･･････<BR>感觉只能用环形马达了<BR>呢
+1-12.txt,869,上代セリフ◇あーあれ,"<TYPE interval=80>あー..　あれ,<BR>ダマスカス剣の方は...<BR>そろそろあがりそうだよ","<TYPE interval=80>啊..　那个,<BR>大马士革剑那边...<BR>差不多快完工了"
+1-12.txt,873,上代セリフ◇この間,<TYPE interval=80>この間見てきたけど..<BR>芸術品だね...　ありゃ,<TYPE interval=80>前阵子我去看了一眼...<BR>简直是件艺术品啊...　那东西
+1-12.txt,882,上代セリフ◇ワイヤー,<TYPE interval=80>ワイヤーの方は...<BR>なかなかパワーのあるモーターが<BR>作れなくて..苦労してる<TYPE>,<TYPE interval=80>线缆那边...<BR>一直做不出动力够强的马达<BR>费了..不少劲<TYPE>
+1-12.txt,886,上代セリフ◇静音,<TYPE interval=70>静音性能も考えると...<BR>リング式のモーターしかない<BR>とは思うんだけどね,<TYPE interval=70>不过考虑到静音性能...<BR>感觉只能用环形马达了<BR>呢
 1-12.txt,890,上代セリフ◇そうすると,<TYPE interval=80>そうするとパワーが<BR>出ないんだよ,<TYPE interval=80>可那样一来动力<BR>又不够啊
-1-12.txt,899,津名川セリフ◇そっち,そっちが本命なんだから....<BR>頼むよ,那边才是重头戏･･････<BR>拜托了
+1-12.txt,899,津名川セリフ◇そっち,そっちが本命なんだから....<BR>頼むよ,那边才是重头戏....<BR>拜托了
 1-12.txt,903,上代セリフ◇がんばってる,"<TYPE interval=70>がんばってるよ,<BR>これでもかなり前倒しで<BR>進めてるんだから","<TYPE interval=70>我已经很努力了,<BR>这都已经大幅提前<BR>进度了"
-1-12.txt,907,上代セリフ◇ただ,<TYPE interval=70>ただでさえ...<BR>最近は高宮研がうるさいのに,<TYPE interval=70>本来･･････<BR>最近高宫实验室就够烦人了
-1-12.txt,914,上代セリフ◇私の,<TYPE interval=80>私の透花ちゃんを<BR>愛してるから..<BR>ここまでできるんだよ,<TYPE interval=80>因为我<BR>爱着我的透花啊･･････<BR>才能做到这一步
+1-12.txt,907,上代セリフ◇ただ,<TYPE interval=70>ただでさえ...<BR>最近は高宮研がうるさいのに,<TYPE interval=70>本来...<BR>最近高宫实验室就够烦人了
+1-12.txt,914,上代セリフ◇私の,<TYPE interval=80>私の透花ちゃんを<BR>愛してるから..<BR>ここまでできるんだよ,<TYPE interval=80>因为我<BR>爱着我的透花啊..<BR>才能做到这一步
 1-12.txt,933,津名川セリフ◇分かった,分かった　分かった,知道了 知道了
-1-12.txt,937,津名川セリフ◇透花,<TYPE interval=50>透花は..お前のものじゃ<BR>ないけどな,<TYPE interval=50>透花･･････可不是你的<BR>东西哦
-1-12.txt,942,上代セリフ◇デート,<TYPE interval=90>分かってるなら...<BR>デートさせてよ</TYPE><TYPE speed=1000 style=Spring>～</TYPE>,<TYPE interval=90>既然知道･･････<BR>就让我跟她约会吧</TYPE><TYPE speed=1000 style=Spring>〜</TYPE>
+1-12.txt,937,津名川セリフ◇透花,<TYPE interval=50>透花は..お前のものじゃ<BR>ないけどな,<TYPE interval=50>透花..可不是你的<BR>东西哦
+1-12.txt,942,上代セリフ◇デート,<TYPE interval=90>分かってるなら...<BR>デートさせてよ</TYPE><TYPE speed=1000 style=Spring>～</TYPE>,<TYPE interval=90>既然知道...<BR>就让我跟她约会吧</TYPE><TYPE speed=1000 style=Spring>〜</TYPE>
 1-12.txt,953,選択◇かわり,<FONT color=red><TYPE interval=0>かわりに俺じゃ<BR>だめかい？,<FONT color=red><TYPE interval=0>换成我的话<BR>不行吗？
 1-12.txt,954,選択◇それは,<FONT color=red><TYPE interval=0>それは危険すぎるから<BR>駄目だ,<FONT color=red><TYPE interval=0>那太危险了<BR>不行
-1-12.txt,1002,津名川セリフ◇かわり,かわりに俺じゃ..<BR>駄目かい？,那换成我･･････<BR>不行吗？
-1-12.txt,1011,上代セリフ◇は,"<TYPE interval=60>はっ....　な～んであたしが,<BR>“男”とデートするわけっ",<TYPE interval=60>哈･･････我干嘛要<BR>跟“男人”约会啊
-1-12.txt,1022,上代セリフ◇とりはだ,<TYPE interval=60>考えただけで...<BR>鳥肌もんよっ,<TYPE interval=60>光想想就･･････<BR>直起鸡皮疙瘩
-1-12.txt,1026,上代セリフ◇トリハダ,<FONT size=20><TYPE interval=60>ト.リ.ハ.ダ.</TYPE>もんっ,<FONT size=20><TYPE interval=60>起。鸡。皮。疙。瘩。了。</TYPE>啦
+1-12.txt,1002,津名川セリフ◇かわり,かわりに俺じゃ..<BR>駄目かい？,那换成我..<BR>不行吗？
+1-12.txt,1011,上代セリフ◇は,"<TYPE interval=60>はっ....　な～んであたしが,<BR>“男”とデートするわけっ","<TYPE interval=60>哈....　我干嘛要,<BR>跟“男人”约会啊"
+1-12.txt,1022,上代セリフ◇とりはだ,<TYPE interval=60>考えただけで...<BR>鳥肌もんよっ,<TYPE interval=60>光想想就...<BR>直起鸡皮疙瘩
+1-12.txt,1026,上代セリフ◇トリハダ,<FONT size=20><TYPE interval=60>ト.リ.ハ.ダ.</TYPE>もんっ,<FONT size=20><TYPE interval=60>起.鸡.皮.疙.瘩.了.</TYPE>啦
 1-12.txt,1037,津名川セリフ◇すまない,すまない<TYPE interval=50>･･････,抱歉<TYPE interval=50>･･････
 1-12.txt,1042,津名川セリフ◇愚問,愚問だったよ,真是个蠢问题
 1-12.txt,1067,津名川セリフ◇それは,それは危険すぎるからダメだ,那太危险了，绝对不行
 1-12.txt,1072,上代セリフ◇ケチ,"<TYPE interval=70>ケチなヤツだな～！,<BR><TYPE interval=90>あたしが何するって<BR>いうんだよ","<TYPE interval=70>真小气〜！,<BR><TYPE interval=90>你说人家<BR>要干嘛嘛"
-1-12.txt,1076,津名川セリフ◇何って,何って...<TYPE interval=60>･･････</TYPE>じゃあ<BR>..<TYPE interval=90>デートって..何するつもりなんだ,干嘛･･････<TYPE interval=60>･･････</TYPE>那<BR>･･････<TYPE interval=90>约会･･････你打算做什么啊
-1-12.txt,1087,上代セリフ◇うっ,"うっ,　それは<TYPE interval=70>･･････</TYPE>,て,<BR>手をつないだり<TYPE interval=60>･･････</TYPE><BR>,それから<TYPE interval=50>･･････</TYPE>","呜，那个<TYPE interval=70>･･････</TYPE>就,<BR>牵牵手什么的<TYPE interval=60>･･････</TYPE><BR>然后<TYPE interval=50>･･････</TYPE>"
-1-12.txt,1096,津名川セリフ◇･･････,"<TYPE interval=50>･･････</TYPE>なにを照れてるんだ,<BR>変なところでつまられると.<BR>こっちが恥ずかしいよ","<TYPE interval=50>･･････</TYPE>你害羞什么啊,<BR>在这种奇怪的地方结巴的话,<BR>弄得我也怪不好意思的"
-1-12.txt,1106,上代セリフ◇わ,"<TYPE interval=70>わ...　分かったよ,<BR><TYPE interval=80>それはまた今度で<BR>いいからさ～","<TYPE interval=70>知･･････知道了啦,<BR><TYPE interval=80>那个下次再<BR>说吧〜"
+1-12.txt,1076,津名川セリフ◇何って,何って...<TYPE interval=60>･･････</TYPE>じゃあ<BR>..<TYPE interval=90>デートって..何するつもりなんだ,干嘛...<TYPE interval=60>･･････</TYPE>那<BR>..<TYPE interval=90>约会..你打算做什么啊
+1-12.txt,1087,上代セリフ◇うっ,"うっ,　それは<TYPE interval=70>･･････</TYPE>,て,<BR>手をつないだり<TYPE interval=60>･･････</TYPE><BR>,それから<TYPE interval=50>･･････</TYPE>","呜,　那个<TYPE interval=70>･･････</TYPE>就,<BR>牵牵手什么的<TYPE interval=60>･･････</TYPE><BR>然后<TYPE interval=50>･･････</TYPE>"
+1-12.txt,1096,津名川セリフ◇･･････,"<TYPE interval=50>･･････</TYPE>なにを照れてるんだ,<BR>変なところでつまられると.<BR>こっちが恥ずかしいよ","<TYPE interval=50>･･････</TYPE>你害羞什么啊,<BR>在这种奇怪的地方结巴的话.<BR>弄得我也怪不好意思的"
+1-12.txt,1106,上代セリフ◇わ,"<TYPE interval=70>わ...　分かったよ,<BR><TYPE interval=80>それはまた今度で<BR>いいからさ～","<TYPE interval=70>知...、知道了啦,<BR><TYPE interval=80>那个下次再<BR>说吧〜"
 1-12.txt,1110,上代セリフ◇あとで,"<TYPE interval=80>あとで連れて来てよ～,<BR>頼むよ～","<TYPE interval=80>回头带我去嘛〜,<BR>拜托啦〜"
 1-12.txt,1114,津名川セリフ◇考えて,<TYPE interval=60>･･････</TYPE><TYPE interval=110>考えとくよ,<TYPE interval=60>･･････</TYPE><TYPE interval=110>我考虑考虑
-1-12.txt,1150,津名川セリフ◇えーと,<TYPE interval=75>えーと..　製薬を<BR>頼んでいたんだけど,<TYPE interval=75>那个･･････ 之前委托<BR>制药的事
+1-12.txt,1150,津名川セリフ◇えーと,<TYPE interval=75>えーと..　製薬を<BR>頼んでいたんだけど,<TYPE interval=75>那个..　之前委托<BR>制药的事
 1-12.txt,1163,薬学研セリフ◇ああ,"ああ<TYPE interval=60>･･････</TYPE>,<BR>津名川さん","啊<TYPE interval=60>･･････</TYPE>,<BR>津名川先生"
-1-12.txt,1167,薬学研セリフ◇なんと,<TYPE interval=75>なんといいますか...<BR>あの薬はウチでは<BR>出来なかったんですよ,<TYPE interval=75>该怎么说呢･･････<BR>那种药我们这边<BR>没能研制出来
-1-12.txt,1171,薬学研セリフ◇今,<TYPE interval=70>今..　奥平博士のほうに.<BR>回してますけど,<TYPE interval=70>现在･･････ 已经转交给<BR>奥平博士那边了
+1-12.txt,1167,薬学研セリフ◇なんと,<TYPE interval=75>なんといいますか...<BR>あの薬はウチでは<BR>出来なかったんですよ,<TYPE interval=75>该怎么说呢...<BR>那种药我们这边<BR>没能研制出来
+1-12.txt,1171,薬学研セリフ◇今,<TYPE interval=70>今..　奥平博士のほうに.<BR>回してますけど,<TYPE interval=70>现在..　已经转交给<BR>奥平博士那边了
 1-12.txt,1175,津名川セリフ◇へえ,へえ,哦
-1-12.txt,1186,薬学研セリフ◇御存知,<TYPE interval=55>御存知ですか？..<BR>精神系の薬剤製薬の<BR>エキスパートなんですけど,<TYPE interval=55>您知道吗？･･････<BR>他可是精神类药物研制<BR>方面的专家
-1-12.txt,1190,薬学研セリフ◇あの人,<TYPE interval=65>あの人に出来なかったら...<BR>もう誰にもお手上げです,<TYPE interval=65>如果连他都做不出来･･････<BR>那就谁也没辙了
+1-12.txt,1186,薬学研セリフ◇御存知,<TYPE interval=55>御存知ですか？..<BR>精神系の薬剤製薬の<BR>エキスパートなんですけど,<TYPE interval=55>您知道吗？..<BR>他可是精神类药物研制<BR>方面的专家
+1-12.txt,1190,薬学研セリフ◇あの人,<TYPE interval=65>あの人に出来なかったら...<BR>もう誰にもお手上げです,<TYPE interval=65>如果连他都做不出来...<BR>那就谁也没辙了
 1-12.txt,1194,薬学研セリフ◇要求条件,<TYPE interval=75>要求条件が<BR>厳しすぎるんですよ,<TYPE interval=75>要求条件<BR>实在太苛刻了
-1-12.txt,1204,薬学研セリフ◇こっち,<TYPE interval=90>こっちでも..<BR>それに近いモノは<BR>出来てるんですが,<TYPE interval=90>我们这边･･････<BR>也做出了<BR>与之相近的东西
-1-12.txt,1208,薬学研セリフ◇なにしろ,なにしろ副作用が酷くて..<BR>実験できませんし<TYPE interval=60>･･････,毕竟副作用太严重了･･････<BR>没法拿来做实验<TYPE interval=60>･･････
-1-12.txt,1217,津名川セリフ◇そう,<TYPE interval=110>そう...<BR>奥平さんか,<TYPE interval=110>这样啊･･････<BR>是奥平啊
+1-12.txt,1204,薬学研セリフ◇こっち,<TYPE interval=90>こっちでも..<BR>それに近いモノは<BR>出来てるんですが,<TYPE interval=90>我们这边..<BR>也做出了<BR>与之相近的东西
+1-12.txt,1208,薬学研セリフ◇なにしろ,なにしろ副作用が酷くて..<BR>実験できませんし<TYPE interval=60>･･････,毕竟副作用太严重了..<BR>没法拿来做实验<TYPE interval=60>･･････
+1-12.txt,1217,津名川セリフ◇そう,<TYPE interval=110>そう...<BR>奥平さんか,<TYPE interval=110>这样啊...<BR>是奥平啊
 1-12.txt,1221,津名川セリフ◇古痕,<TYPE interval=65><RUBY text='ここん'>古痕</RUBY>に入ってまもない頃...<BR>薬で世話になったな,<TYPE interval=65>刚进古痕的时候...<BR>在药物方面受过他的关照
-1-12.txt,1225,津名川セリフ◇じゃあ,<TYPE interval=90>じゃあ...<BR>安心して任せておくよ,<TYPE interval=90>那･･････<BR>就放心交给他吧
-1-12.txt,1235,津名川セリフ◇できる,<TYPE interval=80>でも...　できるだけ急ぐように..<BR>伝えておいてくれないかな,<TYPE interval=80>不过･･････ 尽量催他快点･･････<BR>帮我传达一下吧
+1-12.txt,1225,津名川セリフ◇じゃあ,<TYPE interval=90>じゃあ...<BR>安心して任せておくよ,<TYPE interval=90>那...<BR>就放心交给他吧
+1-12.txt,1235,津名川セリフ◇できる,<TYPE interval=80>でも...　できるだけ急ぐように..<BR>伝えておいてくれないかな,<TYPE interval=80>不过...　尽量催他快点..<BR>帮我传达一下吧
 1-12.txt,1239,薬学研セリフ◇わかり,わかりました,明白了
-1-13-9.txt,17,エマセリフ◇ね,"<TYPE interval=70>ね,　宗慈さん...<BR>レベル４って実戦レベル<BR>なんでしょう？",<TYPE interval=70>那个，宗慈先生･･････<BR>等级4就是实战级别<BR>对吧？
-1-13-9.txt,21,津名川セリフ◇誰,誰から？,谁说的？
-1-13-9.txt,27,沙友セリフ◇ちゃぱつ,"<FONT size=22 face=""ＭＳ ゴシック\><TYPE interval=45>ちゃぱつの<BR>ひと！","<FONT size=22 face=""ＭＳ ゴシック\><TYPE interval=45>茶色头发的人！<BR>"
-1-13-9.txt,41,津名川セリフ◇そうだな,<TYPE interval=60>･･････</TYPE>そうだなぁ,<TYPE interval=60>･･････</TYPE>这个嘛
-1-13-9.txt,44,津名川セリフ◇うーん,<TYPE interval=95>うーん,<TYPE interval=95>嗯——
-1-13-9.txt,48,津名川セリフ◇実戦レベル,<TYPE interval=75>たしかに...<BR>実戦レベルと言われている<BR>設定だけどね,<TYPE interval=75>确实･･････<BR>设定上是被称为<BR>实战级别没错
-1-13-9.txt,52,エマセリフ◇本物,<TYPE interval=55>ってことは..<BR>もう..　<TYPE interval=65>本物相手で戦える<BR>ってこと！？,<TYPE interval=55>也就是说･･････<BR>已经･･････　<TYPE interval=65>能跟真正的对手<BR>交手了！？
-1-13-9.txt,64,透花セリフ◇手を見る,<FONT size=14><TYPE interval=60>･･････,<FONT size=14><TYPE interval=60>･･････
-1-13-9.txt,90,津名川セリフ◇まさか,<TYPE interval=70>まさか,<TYPE interval=70>难道说
-1-13-9.txt,96,津名川セリフ◇シミュレー,<TYPE interval=80>シミュレータと<BR>現実は違うよ,<TYPE interval=80>模拟器和<BR>现实可是两码事哦
-1-13-9.txt,102,津名川セリフ◇あくまで,<TYPE interval=80>あくまでも...<BR>数字の上って奴だ,<TYPE interval=80>说到底･･････<BR>也只是停留在数字层面罢了
-1-13-9.txt,106,津名川セリフ◇危なくて,おまえ達は...安定も<BR>してないし<TYPE interval=60>･･････</TYPE>,你们･･････连发挥都<BR>不稳定呢<TYPE interval=60>･･････</TYPE>
-1-13-9.txt,118,エマセリフ◇残念,<TYPE interval=50>･･････</TYPE>ざんねん,<TYPE interval=50>･･････</TYPE>真遗憾
-1-13-9.txt,122,エマセリフ◇なんだ,<TYPE interval=70>わたし...　あの<BR>スイッチが入って</TYPE>....<BR><TYPE interval=40><FONT size=17>グワァ</FONT>ッ　....<TYPE interval=70>ってなるの..<BR>好きなのに,<TYPE interval=70>我･･････ 就是那种<BR>开关被打开后</TYPE>･･････<BR><TYPE interval=40><FONT size=17>轰</FONT>的一声 ･･････<TYPE interval=70>进入状态的感觉･･････<BR>明明很喜欢啊
-1-13-9.txt,138,沙友セリフ◇あ,"<TYPE style=Jump><FONT face=""ＭＳ ゴシック""><FONT size=20>あ","<TYPE style=Jump><FONT face=""ＭＳ ゴシック""><FONT size=20>啊"
-1-13-9.txt,142,沙友セリフ2◇ぐあ～,"<TYPE interval=80>そゆーの..　さゆも....<BR><FONT face=""ＭＳ ゴシック"" size=26><TYPE style=Jump interval=60 speed=100>ぐぁあ～","<TYPE interval=80>那种感觉･･････ 沙友也･･････<BR><FONT face=""ＭＳ ゴシック"" size=26><TYPE style=Jump interval=60 speed=100>轰啊〜"
-1-13-9.txt,172,沙友セリフ◇びくり,"<TYPE interval=40><FONT size=18 face=""MS ゴシック"" >びくりしたぁ","<TYPE interval=40><FONT size=18 face=""MS ゴシック"" >吓我一跳"
-1-13-9.txt,179,津名川セリフ◇な,<TYPE interval=0>なっ,<TYPE interval=0>什么
-1-13-9.txt,185,津名川セリフ◇なっ,<TYPE interval=30>なんだ！？..<BR>凄い音がしたな,<TYPE interval=30>什么！？･･････<BR>刚才好大一声响
-1-13-9.txt,189,沙友セリフ◇び,"<FONT face=""MS ゴシック"" size=18>び","<FONT face=""MS ゴシック"" size=18>呀"
-1-13-9.txt,210,透花セリフ◇この,<TYPE interval=90>このダンパーの..<BR>きしみ音の数</TYPE><TYPE interval=70>･･････</TYPE>,<TYPE interval=90>这个减震器的･･････<BR>异响次数</TYPE><TYPE interval=70>･･････</TYPE>
-1-13-9.txt,214,透花セリフ◇･･････,<FONT size=15><TYPE interval=60>･･････,<FONT size=15><TYPE interval=60>･･････
-1-13-9.txt,238,透花セリフ◇なにか,<TYPE interval=55>なにか..<BR><TYPE interval=80>とんでもない重さの<BR>精密機械です,<TYPE interval=55>有什么･･････<BR><TYPE interval=80>重得离谱的<BR>精密机械
-1-13-9.txt,242,透花セリフ◇それが,<TYPE interval=75>それが動いてる,<TYPE interval=75>它在动
-1-13-9.txt,246,津名川セリフ◇何,<TYPE interval=30>なんだって？,<TYPE interval=30>你说什么？
-1-13-9.txt,262,津名川セリフ◇出る,<TYPE interval=30>すぐに<BR>ここを出るよ,<TYPE interval=30>马上<BR>离开这里
-1-13-9.txt,275,アナウンスセリフ◇ただいま,"<TYPE interval=55><FONT face=""MS ゴシック"">ただいま１階.<BR>ロビー付近において.<BR>火災事故が発生しました","<TYPE interval=55><FONT face=""MS ゴシック"">现在1层.<BR>大厅附近.<BR>发生了火灾事故"
-1-13-9.txt,281,アナウンスセリフ◇社内の人間,"<TYPE interval=55><FONT face=""MS ゴシック"">所内の職員は近くの..<BR>避難口から避難してください","<TYPE interval=55><FONT face=""MS ゴシック"">所内职员请从最近的...<BR>安全出口进行疏散"
-1-13-9.txt,284,アナウンスセリフ◇くりかえし,"<TYPE interval=55><FONT face=""MS ゴシック"">繰り返します</TYPE><TYPE interval=50>･･････","<TYPE interval=55><FONT face=""MS ゴシック"">重复一次</TYPE><TYPE interval=50>..."
-1-13-9.txt,294,透花セリフ◇ごしゅじんさま,<TYPE interval=10><FONT size=15>ごしゅじ･･････,<TYPE interval=10><FONT size=15>主人･･････
-1-13-9.txt,312,津名川セリフ◇お近く,<TYPE interval=40><FONT size=15>「お近くの避難口」は..<BR>ロビーを通るんですがね</TYPE><TYPE interval=30>･･･,<TYPE interval=40><FONT size=15>“最近的避难口”･･････<BR>得穿过大厅才行啊</TYPE><TYPE interval=30>･･････
-1-13-9.txt,315,津名川セリフ◇地下,<TYPE interval=20>地下駐車場まで.<BR>回るしかないか,<TYPE interval=20>看来只能绕道<BR>地下停车场了
-1-13-9.txt,319,津名川セリフ◇よし,<TYPE interval=40><FONT size=15>よし<TYPE interval=30>･･････</TYPE>,<TYPE interval=40><FONT size=15>好<TYPE interval=30>･･････</TYPE>
-1-13-9.txt,323,透花セリフ◇あ,<FONT size=18>あ,<FONT size=18>啊
 1-13.txt,17,エマセリフ◇うニャ,"<FONT size=20 face=""ＭＳ ゴシック"">うニャ<TYPE speed=800 style=Spring>～","<FONT size=20 face=""ＭＳ ゴシック"">唔喵<TYPE speed=800 style=Spring>〜"
 1-13.txt,25,透花セリフ◇髪,<TYPE interval=90>長いと乾かすの<BR>大変だよね....　髪,<TYPE interval=90>头发太长的话，弄干<BR>很费劲呢･･････
 1-13.txt,32,エマセリフ◇うん,"<TYPE interval=70><FONT size=20 face=""ＭＳ ゴシック"">うん","<TYPE interval=70><FONT size=20 face=""ＭＳ ゴシック"">嗯"
-1-13.txt,51,エマセリフ◇耳に,"耳にまだ,<BR>あの<TYPE interval=90>ぶよぶよが</TYPE><BR>残ってる気がする",感觉耳朵里还残留着<BR>那种<TYPE interval=90>黏糊糊的触感</TYPE><BR>･･････
+1-13.txt,51,エマセリフ◇耳に,"耳にまだ,<BR>あの<TYPE interval=90>ぶよぶよが</TYPE><BR>残ってる気がする","感觉耳朵里还残留着,<BR>那种<TYPE interval=90>黏糊糊的触感</TYPE><BR>･･････"
 1-13.txt,61,沙友セリフ◇ね,<FONT size=20>ね,<FONT size=20>呐
 1-13.txt,65,沙友セリフ◇うまく,<TYPE interval=80>うまくできたかなあ,<TYPE interval=80>不知道做得好不好呢
 1-13.txt,86,エマセリフ◇前より,<TYPE interval=80>前よりは<BR>良くなったと思うよ,<TYPE interval=80>我觉得比之前<BR>有进步哦
@@ -451,77 +417,111 @@ SELECT.txt,14,選択13,おまけ,Extra
 1-13.txt,105,津名川セリフ◇ムラ,<TYPE interval=65>エマはムラが<BR>あるからな,<TYPE interval=65>艾玛总是<BR>状态不稳定啊
 1-13.txt,111,沙友セリフ◇せ,"<TYPE interval=10><FONT face=""MS ゴシック"" size=22>せんせい！","<TYPE interval=10><FONT face=""MS ゴシック"" size=22>老师！"
 1-13.txt,129,エマセリフ◇ひどい,<FONT size=18><TYPE interval=40>ひどいよ～,<FONT size=18><TYPE interval=40>太过分啦〜
-1-13.txt,136,エマセリフ◇わたし,<TYPE interval=60>わたしはいつも..<BR>がんばってるのに,<TYPE interval=60>明明我一直･･････<BR>都很努力的
+1-13.txt,136,エマセリフ◇わたし,<TYPE interval=60>わたしはいつも..<BR>がんばってるのに,<TYPE interval=60>明明我一直..<BR>都很努力的
 1-13.txt,141,選択Ａ◇そうだな,<TYPE interval=0><FONT color=red>そうだな,<TYPE interval=0><FONT color=red>是啊
 1-13.txt,142,選択Ｂ◇それは,<TYPE interval=0><FONT color=red>それは主張する<BR>ことじゃないな,<TYPE interval=0><FONT color=red>那不是该拿出来<BR>主张的事吧
 1-13.txt,143,選択Ｃ◇なんにせよ,<TYPE interval=0><FONT color=red>なんにせよ<BR>結果が全てさ,<TYPE interval=0><FONT color=red>无论如何<BR>结果才是一切
-1-13.txt,169,津名川セリフ◇ここ,<TYPE interval=80>ここで待ってるから...<BR>はやく着替えておいで,<TYPE interval=80>我在这儿等你･･････<BR>快去换衣服吧
-1-13.txt,175,津名川セリフ◇散歩,<TYPE interval=90>散歩がてら...<BR>街に出よう,<TYPE interval=90>顺便散散步･･････<BR>去街上走走吧
+1-13.txt,169,津名川セリフ◇ここ,<TYPE interval=80>ここで待ってるから...<BR>はやく着替えておいで,<TYPE interval=80>我在这儿等你...<BR>快去换衣服吧
+1-13.txt,175,津名川セリフ◇散歩,<TYPE interval=90>散歩がてら...<BR>街に出よう,<TYPE interval=90>顺便散散步...<BR>去街上走走吧
 1-13.txt,193,３人セリフ◇はーい,<FONT size=24><TYPE interval=80>は～い,<FONT size=24><TYPE interval=80>好——嘞
 1-13.txt,207,津名川セリフ◆元気だな,元気だな<TYPE interval=60>･･････,真精神啊<TYPE interval=60>･･････
-1-13.txt,210,津名川セリフ◆まあ,まあ..　子供というのは...<BR>普通..元気なものだが,嘛･･････小孩子嘛･･････<BR>通常･･････都这么有活力
-1-13.txt,217,津名川セリフ◇しかし,<TYPE interval=90>しかし厳密には..<BR>この子たちは子供ではない,<TYPE interval=90>但严格来说･･････<BR>这些孩子并不是小孩子
-1-13.txt,219,津名川セリフ◇人間で,<TYPE interval=90>人間ですら...　ない,<TYPE interval=90>甚至算不上･･････人类
-1-13.txt,221,津名川セリフ◇彼女,<TYPE interval=90>彼女らはプラスチックカプセルの...<BR>人工胎盤で生まれた,<TYPE interval=90>她们诞生于塑料胶囊般的･･････<BR>人工胎盘中
-1-13.txt,250,津名川セリフ◇遺伝子に,<TYPE interval=80>遺伝子プログラムを追加して作った...<BR>“より高次元の生き物”,<TYPE interval=80>通过追加基因程序而创造出来的･･･<BR>“更高次元的生物”
-1-13.txt,252,津名川セリフ◇染色体,<TYPE interval=70>人間の染色体23本をカスタマイズし...<BR>より特別な機能のための24本目の染色体を..<BR>フルプログラミングして追加した....<BR>この世に数体だけの,"<TYPE interval=70>定制了人类的23条染色体･･････<BR>并为了更特殊的功能,<BR>完全编程并追加了第24条染色体･･････<BR>这世上仅有数具的"
-1-13.txt,254,津名川セリフ◇人のような,<TYPE interval=110>“人のような生き物”...なのだ,<TYPE interval=110>“像人一样的生物”･･････正是如此
-1-13.txt,256,津名川セリフ◇エクストラ,"<TYPE interval=80>エクストラ・プログラムは,<BR>この..ＥＸ染色体を持つ生き物....「エクストラ」...<BR>を生み出す為の計画に過ぎなかったが",<TYPE interval=80>“Extra计划”原本只是为了培育出<BR>拥有这种･･････EX染色体的生物･･････“Extra”･･････<BR>的计划罢了
-1-13.txt,258,津名川セリフ◇今や,<TYPE interval=110>今や...古痕の中核プロジェクトと.<BR>なりつつある<TYPE interval=70>･･････</TYPE>,<TYPE interval=110>如今･･････却正逐渐成为“古痕”的核心项目<BR>･･････<TYPE interval=70>･･････</TYPE>
+1-13.txt,210,津名川セリフ◆まあ,まあ..　子供というのは...<BR>普通..元気なものだが,毕竟..　是小孩子嘛...<BR>通常..都这么有活力
+1-13.txt,217,津名川セリフ◇しかし,<TYPE interval=90>しかし厳密には..<BR>この子たちは子供ではない,<TYPE interval=90>但严格来说..<BR>这些孩子并不是小孩子
+1-13.txt,219,津名川セリフ◇人間で,<TYPE interval=90>人間ですら...　ない,<TYPE interval=90>甚至算不上..　人类
+1-13.txt,221,津名川セリフ◇彼女,<TYPE interval=90>彼女らはプラスチックカプセルの...<BR>人工胎盤で生まれた,<TYPE interval=90>她们诞生于塑料胶囊般的...<BR>人工胎盘中
+1-13.txt,250,津名川セリフ◇遺伝子に,<TYPE interval=80>遺伝子プログラムを追加して作った...<BR>“より高次元の生き物”,<TYPE interval=80>通过追加基因程序而创造出来的...<BR>“更高次元的生物”
+1-13.txt,252,津名川セリフ◇染色体,<TYPE interval=70>人間の染色体23本をカスタマイズし...<BR>より特別な機能のための24本目の染色体を..<BR>フルプログラミングして追加した....<BR>この世に数体だけの,"<TYPE interval=70>定制了人类的23条染色体...<BR>并为了更特殊的功能,<BR>完全编程并追加了第24条染色体..<BR>这世上仅有数具的"
+1-13.txt,254,津名川セリフ◇人のような,<TYPE interval=110>“人のような生き物”...なのだ,<TYPE interval=110>“像人一样的生物”...正是如此
+1-13.txt,256,津名川セリフ◇エクストラ,"<TYPE interval=80>エクストラ・プログラムは,<BR>この..ＥＸ染色体を持つ生き物....「エクストラ」...<BR>を生み出す為の計画に過ぎなかったが",<TYPE interval=80>“Extra计划”原本只是为了培育出<BR>拥有这种..EX染色体的生物....“Extra”...<BR>的计划罢了
+1-13.txt,258,津名川セリフ◇今や,<TYPE interval=110>今や...古痕の中核プロジェクトと.<BR>なりつつある<TYPE interval=70>･･････</TYPE>,<TYPE interval=110>如今...却正逐渐成为.<BR>“古痕”的核心项目<TYPE interval=70>･･････</TYPE>
 1-13.txt,311,津名川セリフ◇そうだな,そうだな,是啊
-1-13.txt,315,津名川セリフ◇ごめん,ごめん...　エマ,抱歉･･････艾玛
+1-13.txt,315,津名川セリフ◇ごめん,ごめん...　エマ,抱歉...　艾玛
 1-13.txt,322,エマセリフ◇にゃ,"<FONT size=18 face=""ＭＳ ゴシック""><TYPE style=Jump interval=250 speed=200>に</TYPE>ゃ","<FONT size=18 face=""ＭＳ ゴシック""><TYPE style=Jump interval=250 speed=200>喵</TYPE>"
-1-13.txt,342,沙友セリフ◇さゆ,"<FONT face=""ＭＳ ゴシック"" size=20><TYPE style=Wave interval=120>さ～ゆ～　も～","<FONT face=""ＭＳ ゴシック"" size=20><TYPE style=Wave interval=120>沙——友——也——"
+1-13.txt,342,沙友セリフ◇さゆ,"<FONT face=""ＭＳ ゴシック"" size=20><TYPE style=Wave interval=120>さ～ゆ～　も～","<FONT face=""ＭＳ ゴシック"" size=20><TYPE style=Wave interval=120>沙～友～　也～"
 1-13.txt,349,津名川セリフ◇はいはい,はいはい,好好好
-1-13.txt,355,津名川セリフ◇とうか,透花も.沙友も..<BR>がんばってるよな,透花也是，沙友也是･･････<BR>都很努力呢
-1-13.txt,385,津名川セリフ◇それは,<TYPE interval=90>それは...　主張する<BR>ことじゃないな,<TYPE interval=90>努力这种事･･････<BR>不是用来挂在嘴边标榜的
-1-13.txt,395,エマセリフ◇ええー,<FONT size=20><TYPE interval=60>ええ～っ,<FONT size=20><TYPE interval=60>诶——
-1-13.txt,402,エマセリフ◇言わなきゃ,<TYPE interval=45>言わなきゃ...<BR>わかんないもん！,<TYPE interval=45>如果不说出来的话･･････<BR>别人是不会懂的！
-1-13.txt,407,津名川セリフ◇もし,<TYPE interval=77>もし..　分かって<BR>貰えなくても　さ,<TYPE interval=77>就算･･････得不到<BR>别人的理解，也是
-1-13.txt,413,津名川セリフ◇それを,<TYPE interval=80>それを自分で<BR>言っちゃうのは...<BR><TYPE interval=70>美しくないだろ,<TYPE interval=80>但这种话要是由自己<BR>亲口说出来･･････<BR><TYPE interval=70>姿态可就不够漂亮了啊
-1-13.txt,419,エマセリフ◇そっか,<TYPE interval=75><FONT size=15>そっか<TYPE interval=60>･･･,<TYPE interval=75><FONT size=15>这样啊<TYPE interval=60>･･････
-1-13.txt,423,エマセリフ◇うん,<FONT size=15>うん....<BR>わかった<TYPE interval=60>･･･,<FONT size=15>嗯･･････<BR>我明白了<TYPE interval=60>･･････
-1-13.txt,436,透花セリフ◇エマ,"<TYPE interval=75>エマがいつも頑張ってるのは,<BR>みんな..わかってると思うよ","<TYPE interval=75>艾玛平时有多努力,<BR>大家･･････都是看在眼里的哦"
+1-13.txt,355,津名川セリフ◇とうか,透花も.沙友も..<BR>がんばってるよな,透花也是，沙友也是..<BR>都很努力呢
+1-13.txt,385,津名川セリフ◇それは,<TYPE interval=90>それは...　主張する<BR>ことじゃないな,<TYPE interval=90>努力这种事...　<BR>不是用来挂在嘴边标榜的
+1-13.txt,395,エマセリフ◇ええー,<FONT size=20><TYPE interval=60>ええ～っ,<FONT size=20><TYPE interval=60>诶～
+1-13.txt,402,エマセリフ◇言わなきゃ,<TYPE interval=45>言わなきゃ...<BR>わかんないもん！,<TYPE interval=45>如果不说出来的话...<BR>别人是不会懂的！
+1-13.txt,407,津名川セリフ◇もし,<TYPE interval=77>もし..　分かって<BR>貰えなくても　さ,<TYPE interval=77>就算..　得不到<BR>别人的理解　也是
+1-13.txt,413,津名川セリフ◇それを,<TYPE interval=80>それを自分で<BR>言っちゃうのは...<BR><TYPE interval=70>美しくないだろ,<TYPE interval=80>但这种话要是由自己<BR>亲口说出来...<BR><TYPE interval=70>姿态可就不够漂亮了啊
+1-13.txt,419,エマセリフ◇そっか,<TYPE interval=75><FONT size=15>そっか<TYPE interval=60>･･･,<TYPE interval=75><FONT size=15>这样啊<TYPE interval=60>･･･
+1-13.txt,423,エマセリフ◇うん,<FONT size=15>うん....<BR>わかった<TYPE interval=60>･･･,<FONT size=15>嗯....<BR>我明白了<TYPE interval=60>･･･
+1-13.txt,436,透花セリフ◇エマ,"<TYPE interval=75>エマがいつも頑張ってるのは,<BR>みんな..わかってると思うよ","<TYPE interval=75>艾玛平时有多努力,<BR>大家..都是看在眼里的哦"
 1-13.txt,442,エマセリフ◇そか,そかなぁ<TYPE interval=60>･･････,是这样吗<TYPE interval=60>･･････
-1-13.txt,472,津名川セリフ◇結果,<TYPE interval=90>なんにせよ...<BR>結果がすべてさ,<TYPE interval=90>但不管怎样･･････<BR>结果才是一切
-1-13.txt,478,津名川セリフ◇大切,<TYPE interval=80>努力は大切だが....<BR>努力だけしてればいいのか..<BR>と言うとそうでもない,<TYPE interval=80>努力固然重要･･････<BR>但光靠努力就够了吗･･････<BR>倒也不是这样
-1-13.txt,482,津名川セリフ◇というのは,<TYPE interval=80>努力というのは....<BR>目標に向かう方向性と,<TYPE interval=80>所谓努力･･････<BR>是朝着目标前进的方向性
+1-13.txt,472,津名川セリフ◇結果,<TYPE interval=90>なんにせよ...<BR>結果がすべてさ,<TYPE interval=90>但不管怎样...<BR>结果才是一切
+1-13.txt,478,津名川セリフ◇大切,<TYPE interval=80>努力は大切だが....<BR>努力だけしてればいいのか..<BR>と言うとそうでもない,<TYPE interval=80>努力固然重要....<BR>但光靠努力就够了吗..<BR>倒也不是这样
+1-13.txt,482,津名川セリフ◇というのは,<TYPE interval=80>努力というのは....<BR>目標に向かう方向性と,<TYPE interval=80>所谓努力....<BR>是朝着目标前进的方向性
 1-13.txt,485,津名川セリフ◇その場,"<TYPE interval=80>その場に応じた良い判断,<BR>工夫が伴ってこそ意味がある","<TYPE interval=80>以及随机应变的明智判断,<BR>并加以巧思，这样才有意义"
-1-13.txt,491,津名川セリフ◇そもそも,<TYPE interval=90>そもそも..“何の為の努力なのか”....<BR>ということがしっかりしていないと,<TYPE interval=90>说到底･･････如果连“究竟是为了什么而努力”･･････<BR>这个根本问题都没搞清楚的话，
-1-13.txt,494,津名川セリフ◇どれだけ,<TYPE interval=90>どれだけ精一杯努力しても...<BR>意味がなくなってしまう<BR>ものなんだよ,<TYPE interval=90>那无论多么拼尽全力･･････<BR>都会变得毫无意义<BR>的啊
+1-13.txt,491,津名川セリフ◇そもそも,<TYPE interval=90>そもそも..“何の為の努力なのか”....<BR>ということがしっかりしていないと,<TYPE interval=90>说到底..如果连“究竟是为了什么而努力”....<BR>这个根本问题都没搞清楚的话，
+1-13.txt,494,津名川セリフ◇どれだけ,<TYPE interval=90>どれだけ精一杯努力しても...<BR>意味がなくなってしまう<BR>ものなんだよ,<TYPE interval=90>那无论多么拼尽全力...<BR>都会变得毫无意义<BR>的啊
 1-13.txt,502,エマセリフ◇うにゅ,うにゅ<TYPE interval=50>･･････,唔嗯<TYPE interval=50>･･････
 1-13.txt,507,エマセリフ◇む,<TYPE interval=110>むずかしい</TYPE><TYPE interval=60>･･････,<TYPE interval=110>太难懂了</TYPE><TYPE interval=60>･･････
-1-13.txt,522,津名川セリフ◇ちょっと,ちょっと<BR>...キツかったかな<TYPE interval=70>･･････,是不是･･････<BR>･･････说得太深奥了<TYPE interval=70>･･････
+1-13.txt,522,津名川セリフ◇ちょっと,ちょっと<BR>...キツかったかな<TYPE interval=70>･･････,是不是<BR>...说得太深奥了<TYPE interval=70>･･････
+1-13-9.txt,17,エマセリフ◇ね,"<TYPE interval=70>ね,　宗慈さん...<BR>レベル４って実戦レベル<BR>なんでしょう？","<TYPE interval=70>那个,　宗慈先生...<BR>等级４就是实战级别<BR>对吧？"
+1-13-9.txt,21,津名川セリフ◇誰,誰から？,谁说的？
+1-13-9.txt,27,沙友セリフ◇ちゃぱつ,"<FONT size=22 face=""ＭＳ ゴシック\><TYPE interval=45>ちゃぱつの<BR>ひと！","<FONT size=22 face=""ＭＳ ゴシック\><TYPE interval=45>茶色头发的<BR>人！"
+1-13-9.txt,41,津名川セリフ◇そうだな,<TYPE interval=60>･･････</TYPE>そうだなぁ,<TYPE interval=60>･･････</TYPE>这个嘛
+1-13-9.txt,44,津名川セリフ◇うーん,<TYPE interval=95>うーん,<TYPE interval=95>嗯
+1-13-9.txt,48,津名川セリフ◇実戦レベル,<TYPE interval=75>たしかに...<BR>実戦レベルと言われている<BR>設定だけどね,<TYPE interval=75>确实...<BR>设定上是被称为<BR>实战级别没错
+1-13-9.txt,52,エマセリフ◇本物,<TYPE interval=55>ってことは..<BR>もう..　<TYPE interval=65>本物相手で戦える<BR>ってこと！？,<TYPE interval=55>也就是说..<BR>已经..　<TYPE interval=65>能跟真正的对手<BR>交手了！？
+1-13-9.txt,64,透花セリフ◇手を見る,<FONT size=14><TYPE interval=60>･･････,<FONT size=14><TYPE interval=60>･･････
+1-13-9.txt,90,津名川セリフ◇まさか,<TYPE interval=70>まさか,<TYPE interval=70>难道说
+1-13-9.txt,96,津名川セリフ◇シミュレー,<TYPE interval=80>シミュレータと<BR>現実は違うよ,<TYPE interval=80>模拟器和<BR>现实可是两码事哦
+1-13-9.txt,102,津名川セリフ◇あくまで,<TYPE interval=80>あくまでも...<BR>数字の上って奴だ,<TYPE interval=80>说到底...<BR>也只是停留在数字层面罢了
+1-13-9.txt,106,津名川セリフ◇危なくて,おまえ達は...安定も<BR>してないし<TYPE interval=60>･･････</TYPE>,你们...连发挥都<BR>不稳定呢<TYPE interval=60>･･････</TYPE>
+1-13-9.txt,118,エマセリフ◇残念,<TYPE interval=50>･･････</TYPE>ざんねん,<TYPE interval=50>･･････</TYPE>真遗憾
+1-13-9.txt,122,エマセリフ◇なんだ,<TYPE interval=70>わたし...　あの<BR>スイッチが入って</TYPE>....<BR><TYPE interval=40><FONT size=17>グワァ</FONT>ッ　....<TYPE interval=70>ってなるの..<BR>好きなのに,<TYPE interval=70>我...　就是那种<BR>开关被打开后</TYPE>....<BR><TYPE interval=40><FONT size=17>轰</FONT>的一声　....<TYPE interval=70>进入状态的感觉..<BR>明明很喜欢啊
+1-13-9.txt,138,沙友セリフ◇あ,"<TYPE style=Jump><FONT face=""ＭＳ ゴシック""><FONT size=20>あ","<TYPE style=Jump><FONT face=""ＭＳ ゴシック""><FONT size=20>啊"
+1-13-9.txt,142,沙友セリフ2◇ぐあ～,"<TYPE interval=80>そゆーの..　さゆも....<BR><FONT face=""ＭＳ ゴシック"" size=26><TYPE style=Jump interval=60 speed=100>ぐぁあ～","<TYPE interval=80>那种感觉..　沙友也....<BR><FONT face=""ＭＳ ゴシック"" size=26><TYPE style=Jump interval=60 speed=100>轰啊〜"
+1-13-9.txt,172,沙友セリフ◇びくり,"<TYPE interval=40><FONT size=18 face=""MS ゴシック"" >びくりしたぁ","<TYPE interval=40><FONT size=18 face=""MS ゴシック"" >吓我一跳"
+1-13-9.txt,179,津名川セリフ◇な,<TYPE interval=0>なっ,<TYPE interval=0>什么
+1-13-9.txt,185,津名川セリフ◇なっ,<TYPE interval=30>なんだ！？..<BR>凄い音がしたな,<TYPE interval=30>什么！？..<BR>刚才好大一声响
+1-13-9.txt,189,沙友セリフ◇び,"<FONT face=""MS ゴシック"" size=18>び","<FONT face=""MS ゴシック"" size=18>呀"
+1-13-9.txt,210,透花セリフ◇この,<TYPE interval=90>このダンパーの..<BR>きしみ音の数</TYPE><TYPE interval=70>･･････</TYPE>,<TYPE interval=90>这个减震器的..<BR>异响次数</TYPE><TYPE interval=70>･･････</TYPE>
+1-13-9.txt,214,透花セリフ◇･･････,<FONT size=15><TYPE interval=60>･･････,<FONT size=15><TYPE interval=60>･･････
+1-13-9.txt,238,透花セリフ◇なにか,<TYPE interval=55>なにか..<BR><TYPE interval=80>とんでもない重さの<BR>精密機械です,<TYPE interval=55>有什么..<BR><TYPE interval=80>重得离谱的<BR>精密机械
+1-13-9.txt,242,透花セリフ◇それが,<TYPE interval=75>それが動いてる,<TYPE interval=75>它在动
+1-13-9.txt,246,津名川セリフ◇何,<TYPE interval=30>なんだって？,<TYPE interval=30>你说什么？
+1-13-9.txt,262,津名川セリフ◇出る,<TYPE interval=30>すぐに<BR>ここを出るよ,<TYPE interval=30>马上<BR>离开这里
+1-13-9.txt,275,アナウンスセリフ◇ただいま,"<TYPE interval=55><FONT face=""MS ゴシック"">ただいま１階.<BR>ロビー付近において.<BR>火災事故が発生しました","<TYPE interval=55><FONT face=""MS ゴシック"">现在1层.<BR>大厅附近.<BR>发生了火灾事故"
+1-13-9.txt,281,アナウンスセリフ◇社内の人間,"<TYPE interval=55><FONT face=""MS ゴシック"">所内の職員は近くの..<BR>避難口から避難してください","<TYPE interval=55><FONT face=""MS ゴシック"">所内职员请从最近的..<BR>安全出口进行疏散"
+1-13-9.txt,284,アナウンスセリフ◇くりかえし,"<TYPE interval=55><FONT face=""MS ゴシック"">繰り返します</TYPE><TYPE interval=50>･･････","<TYPE interval=55><FONT face=""MS ゴシック"">重复一次</TYPE><TYPE interval=50>･･････"
+1-13-9.txt,294,透花セリフ◇ごしゅじんさま,<TYPE interval=10><FONT size=15>ごしゅじ･･････,<TYPE interval=10><FONT size=15>主人･･････
+1-13-9.txt,312,津名川セリフ◇お近く,<TYPE interval=40><FONT size=15>「お近くの避難口」は..<BR>ロビーを通るんですがね</TYPE><TYPE interval=30>･･･,<TYPE interval=40><FONT size=15>“最近的安全出口”..<BR>得穿过大厅才行啊</TYPE><TYPE interval=30>･･････
+1-13-9.txt,315,津名川セリフ◇地下,<TYPE interval=20>地下駐車場まで.<BR>回るしかないか,<TYPE interval=20>看来只能.<BR>绕道地下停车场了
+1-13-9.txt,319,津名川セリフ◇よし,<TYPE interval=40><FONT size=15>よし<TYPE interval=30>･･････</TYPE>,<TYPE interval=40><FONT size=15>好<TYPE interval=30>･･････</TYPE>
+1-13-9.txt,323,透花セリフ◇あ,<FONT size=18>あ,<FONT size=18>啊
 1-14.txt,32,透花セリフ◇う,<FONT size=15><TYPE interval=50>･･････</TYPE>っう,<FONT size=15><TYPE interval=50>･･････</TYPE>唔
 1-14.txt,45,エマセリフ◇とーか,<TYPE interval=20><FONT size=26>とーかっ！,<TYPE interval=20><FONT size=26>透花！
 1-14.txt,51,エマセリフ◇この,<TYPE interval=50>この</TYPE><TYPE interval=20>･･････,<TYPE interval=50>这</TYPE><TYPE interval=20>･･････
-1-14.txt,66,エマセリフ◇おおお,"<TYPE interval=120><FONT face=""MS ゴシック"" size=24>お...ぉ</FONT><FONT face=""MS ゴシック"" size=29>お","<TYPE interval=120><FONT face=""MS ゴシック"" size=24>啊･･････啊</FONT><FONT face=""MS ゴシック"" size=29>啊"
-1-14.txt,129,津名川セリフ◇厄日,<TYPE interval=0>くっ<BR>.....<TYPE interval=20>厄日かって･･････！,<TYPE interval=0>唔<BR>･･････<TYPE interval=20>今天是什么背运日子啊･･････！
-1-14.txt,136,津名川セリフ◇おまえ達,<TYPE interval=35>おまえ達...　モードは<BR>切り替えてるなっ！？,<TYPE interval=35>你们･･････<BR>已经切换好模式了吧！？
+1-14.txt,66,エマセリフ◇おおお,"<TYPE interval=120><FONT face=""MS ゴシック"" size=24>お...ぉ</FONT><FONT face=""MS ゴシック"" size=29>お","<TYPE interval=120><FONT face=""MS ゴシック"" size=24>啊...啊</FONT><FONT face=""MS ゴシック"" size=29>啊"
+1-14.txt,129,津名川セリフ◇厄日,<TYPE interval=0>くっ<BR>.....<TYPE interval=20>厄日かって･･････！,<TYPE interval=0>唔<BR>.....<TYPE interval=20>今天是什么背运日子啊･･････！
+1-14.txt,136,津名川セリフ◇おまえ達,<TYPE interval=35>おまえ達...　モードは<BR>切り替えてるなっ！？,<TYPE interval=35>你们...　<BR>已经切换好模式了吧！？
 1-14.txt,142,三人セリフ◇はい,<TYPE interval=10><FONT size=16>はい！,<TYPE interval=10><FONT size=16>是！
 1-14.txt,144,三人セリフ◇うん,<TYPE interval=10><FONT size=16>うん！,<TYPE interval=10><FONT size=16>嗯！
 1-14.txt,146,三人セリフ◇とっくに,<TYPE interval=10><FONT size=16>とっくに･･････っ！,<TYPE interval=10><FONT size=16>早就･･････！
 1-14.txt,158,津名川セリフ◇よく,<TYPE interval=20><FONT size=17>こうなったら<BR>やるしかない！,<TYPE interval=20><FONT size=17>事已至此<BR>只能拼了！
-1-14.txt,162,津名川セリフ◇敵,<TYPE interval=35>こいつは敵だ！....<BR><FONT size=17><TYPE interval=20>倒す！,<TYPE interval=35>这家伙是敌人！･･････<BR><FONT size=17><TYPE interval=20>打倒它！
+1-14.txt,162,津名川セリフ◇敵,<TYPE interval=35>こいつは敵だ！....<BR><FONT size=17><TYPE interval=20>倒す！,<TYPE interval=35>这家伙是敌人！....<BR><FONT size=17><TYPE interval=20>打倒它！
 1-14.txt,166,津名川セリフ◇破壊,<FONT size=17><TYPE interval=20>破壊するんだ！,<FONT size=17><TYPE interval=20>破坏目标！
 1-14.txt,183,透花セリフ◇いきます,<TYPE interval=30><FONT size=20 face='ＭＳ　ゴシック'>いきますっ！,<TYPE interval=30><FONT size=20 face='ＭＳ　ゴシック'>我们上！
 1-14.txt,186,エマセリフ◇よおーし,<TYPE interval=20><FONT size=24 face='ＭＳ　ゴシック'><B>よおーし！,<TYPE interval=20><FONT size=24 face='ＭＳ　ゴシック'><B>好——！
-1-15.txt,8,Ｂセリフ◇おーおー,<TYPE interval=74><FONT size=15>おーおー...<BR>ずいぶん派手に<BR>やってるな,<TYPE interval=74><FONT size=15>哦哦･･････<BR>搞得挺大啊<BR>这阵仗
-1-15.txt,10,Ｂセリフ◇２３０,<FONT size=15><TYPE interval=65>２・３０人は死んでるな..<BR>こりゃ,<FONT size=15><TYPE interval=65>少说也死了两三十人啊･･････<BR>这下
+1-15.txt,8,Ｂセリフ◇おーおー,<TYPE interval=74><FONT size=15>おーおー...<BR>ずいぶん派手に<BR>やってるな,<TYPE interval=74><FONT size=15>哦哦...<BR>搞得挺大啊<BR>这阵仗
+1-15.txt,10,Ｂセリフ◇２３０,<FONT size=15><TYPE interval=65>２・３０人は死んでるな..<BR>こりゃ,<FONT size=15><TYPE interval=65>少说也死了两三十人啊..<BR>这下
 1-15.txt,12,Ａセリフ◆時間,<TYPE interval=60><FONT size=15>時間...<BR>どれぐらいですか,<TYPE interval=60><FONT size=15>时间...<BR>大概要多久？
-1-15.txt,14,Ｂセリフ◆なんの,<TYPE interval=65><FONT size=15>なんの？....<BR>爆発までか？,<TYPE interval=65><FONT size=15>什么？･･････<BR>离爆炸还有多久？
-1-15.txt,16,Ａセリフ◆そう,<TYPE interval=65><FONT size=15>そうです..<BR>まさか一時間ってこた<BR>ないでしょう,<TYPE interval=65><FONT size=15>是的･･････<BR>总不可能还有<BR>一个小时吧
-1-15.txt,46,Ｂセリフ◇モード,<TYPE interval=55><FONT size=15>１０分だ...<BR>モード・レッドだと..<BR>すぐ弾薬も尽きるからな,<TYPE interval=55><FONT size=15>10分钟･･････<BR>如果是红色模式的话･･････<BR>弹药很快就会耗尽
+1-15.txt,14,Ｂセリフ◆なんの,<TYPE interval=65><FONT size=15>なんの？....<BR>爆発までか？,<TYPE interval=65><FONT size=15>什么？...<BR>离爆炸还有多久？
+1-15.txt,16,Ａセリフ◆そう,<TYPE interval=65><FONT size=15>そうです..<BR>まさか一時間ってこた<BR>ないでしょう,<TYPE interval=65><FONT size=15>是的..<BR>总不可能还有<BR>一个小时吧
+1-15.txt,46,Ｂセリフ◇モード,<TYPE interval=55><FONT size=15>１０分だ...<BR>モード・レッドだと..<BR>すぐ弾薬も尽きるからな,<TYPE interval=55><FONT size=15>10分钟...<BR>如果是红色模式的话..<BR>弹药很快就会耗尽
 1-15.txt,50,Ａセリフ◇ですか,ですか,是吗
 1-15.txt,54,Ｂセリフ◇お,お,哦
 1-15.txt,58,Ｂセリフ◇おお,おお<TYPE interval=50>･･････？,哦哦<TYPE interval=50>･･････？
 1-15.txt,63,Ａセリフ◇どう,<TYPE interval=55>どうしました？,<TYPE interval=55>怎么了？
 1-15.txt,75,Ｂセリフ◇コレ,<TYPE interval=50>コレを見ろよ,<TYPE interval=50>看看这个
-1-15.txt,79,Ａセリフ◇なんですか,<TYPE interval=60>･･･</TYPE><TYPE interval=65>なんですか？...<BR>この子供たちは,<TYPE interval=60>･･････</TYPE><TYPE interval=65>什么？･･････<BR>这些孩子是
+1-15.txt,79,Ａセリフ◇なんですか,<TYPE interval=60>･･･</TYPE><TYPE interval=65>なんですか？...<BR>この子供たちは,<TYPE interval=60>･･･</TYPE><TYPE interval=65>什么？...<BR>这些孩子是
 1-15.txt,83,Ａセリフ◇まさか,<TYPE interval=50>･･････</TYPE>まさか,<TYPE interval=50>･･････</TYPE>难道
-1-15.txt,87,Ａセリフ◇コイツ,<TYPE interval=55>戦ってるんですか？...<BR>コイツと</TYPE><TYPE interval=60>･･････,<TYPE interval=55>在战斗吗？･･････<BR>跟这家伙</TYPE><TYPE interval=60>･･････
+1-15.txt,87,Ａセリフ◇コイツ,<TYPE interval=55>戦ってるんですか？...<BR>コイツと</TYPE><TYPE interval=60>･･････,<TYPE interval=55>在战斗吗？...<BR>跟这家伙</TYPE><TYPE interval=60>･･････
 1-15.txt,103,Ａセリフ◇うわ,<TYPE interval=0><FONT size=17>うわ！,<TYPE interval=0><FONT size=17>哇！
-1-15.txt,108,Ａセリフ◇今,<TYPE interval=64>見ましたか...<BR>いまの,<TYPE interval=64>看到了吗･･････<BR>刚才那个
+1-15.txt,108,Ａセリフ◇今,<TYPE interval=64>見ましたか...<BR>いまの,<TYPE interval=64>看到了吗...<BR>刚才那个
 1-15.txt,112,Ｂセリフ◇信じ,<TYPE interval=60>信じられんな</TYPE><TYPE interval=70>･･････,<TYPE interval=60>真不敢相信</TYPE><TYPE interval=70>･･････
 1-15.txt,116,Ｂセリフ◇機体,<TYPE interval=55>３ｔの機体だぞ<TYPE interval=60>･･････,<TYPE interval=55>那可是3T的机体啊<TYPE interval=60>･･････
 1-16.txt,13,津名川セリフ◇･･････,<TYPE interval=60>･･････,<TYPE interval=60>･･････
@@ -529,38 +529,38 @@ SELECT.txt,14,選択13,おまけ,Extra
 1-16.txt,70,津名川セリフ◇よくやった,<TYPE interval=60>･･････</TYPE><TYPE interval=110>よくやった,<TYPE interval=60>･･････</TYPE><TYPE interval=110>干得好
 1-16.txt,90,津名川セリフ◇ふう,<TYPE interval=50>･･････</TYPE>ふぅ,<TYPE interval=50>･･････</TYPE>呼
 1-16.txt,94,津名川セリフ◇無事,<TYPE interval=90>無事だったか,<TYPE interval=90>平安无事啊
-1-16.txt,98,津名川セリフ◇上代,<TYPE interval=90>上代も</TYPE><TYPE interval=50>･･･</TYPE>...<BR>うん,<TYPE interval=90>上代也</TYPE><TYPE interval=50>･･････</TYPE>･･････<BR>嗯
+1-16.txt,98,津名川セリフ◇上代,<TYPE interval=90>上代も</TYPE><TYPE interval=50>･･･</TYPE>...<BR>うん,<TYPE interval=90>上代也</TYPE><TYPE interval=50>･･･</TYPE>...<BR>嗯
 1-16.txt,102,津名川セリフ◇こっち,<TYPE interval=80>こっちもなんとか,<TYPE interval=80>这边也总算搞定了
 1-16.txt,106,津名川セリフ◇ああ,ああ,啊
 1-16.txt,123,津名川セリフ◇そう,そう,这样啊
-1-16.txt,126,津名川セリフ◇それを今,<TYPE interval=90>それを今<BR>...破壊したんだが,<TYPE interval=90>那东西刚才<BR>･･････被破坏了
+1-16.txt,126,津名川セリフ◇それを今,<TYPE interval=90>それを今<BR>...破壊したんだが,<TYPE interval=90>那东西刚才<BR>...被破坏了
 1-16.txt,133,津名川セリフ◇わか,<TYPE interval=50>･･････</TYPE>わかった,<TYPE interval=50>･･････</TYPE>知道了
 1-16.txt,137,津名川セリフ◇じゃ,じゃ,那么
 1-16.txt,154,津名川セリフ◇とんだ,<TYPE interval=90>とんだ実戦テストに<BR>なったな,<TYPE interval=90>成了场名副其实的<BR>实战测试啊
-1-16.txt,160,津名川セリフ◇とも,<TYPE interval=90>ともあれ</TYPE><TYPE interval=50>･･･,<TYPE interval=90>总之</TYPE><TYPE interval=50>･･････
-1-16.txt,164,津名川セリフ◇よくやった,<TYPE interval=70>本当に..よくやった,<TYPE interval=70>真的･･････干得好
+1-16.txt,160,津名川セリフ◇とも,<TYPE interval=90>ともあれ</TYPE><TYPE interval=50>･･･,<TYPE interval=90>总之</TYPE><TYPE interval=50>･･･
+1-16.txt,164,津名川セリフ◇よくやった,<TYPE interval=70>本当に..よくやった,<TYPE interval=70>真的..干得好
 1-16.txt,178,津名川セリフ◇かなり,<TYPE interval=75>ロビーでかなり<BR>被害が出たそうだ,<TYPE interval=75>听说大厅那边<BR>受损相当严重
-1-16.txt,182,津名川セリフ◇僕が,<TYPE interval=65>僕が無事なのは...<BR>お前たちのおかげだよ,<TYPE interval=65>我能平安无事･･････<BR>多亏了你们啊
+1-16.txt,182,津名川セリフ◇僕が,<TYPE interval=65>僕が無事なのは...<BR>お前たちのおかげだよ,<TYPE interval=65>我能平安无事...<BR>多亏了你们啊
 1-16.txt,192,津名川セリフ◇今,<TYPE interval=75>今から<BR>処理が来る,<TYPE interval=75>善后的人<BR>马上就到
 1-16.txt,196,津名川セリフ◇服,"<TYPE interval=90>服を持っておいで<BR>,<TYPE interval=60>･･････</TYPE>帰ろう","<TYPE interval=90>去拿衣服吧<BR>,<TYPE interval=60>･･････</TYPE>我们回去吧"
 1-16.txt,224,津名川セリフ◇モード,モード<TYPE interval=50>･･････,模式<TYPE interval=50>･･････
 1-16.txt,231,津名川セリフ◇もう,もう戻して大丈夫だよ,已经可以解除了哦
-1-16.txt,235,沙友セリフ◇うん,"<FONT size=15 face=""ＭＳ ゴシック\>う...<TYPE interval=60>･･････.ん","<FONT size=15 face=""ＭＳ ゴシック\>呜･･････<TYPE interval=60>･･････嗯"
+1-16.txt,235,沙友セリフ◇うん,"<FONT size=15 face=""ＭＳ ゴシック\>う...<TYPE interval=60>･･････.ん","<FONT size=15 face=""ＭＳ ゴシック\>呜...<TYPE interval=60>･･････.嗯"
 1-16.txt,245,沙友セリフ◇う,"<FONT size=18 face=""ＭＳ ゴシック\>う","<FONT size=18 face=""ＭＳ ゴシック\>呜"
-1-16.txt,250,沙友セリフ◇うええ,"<TYPE interval=70 style=Fade><FONT size=18 face=""ＭＳ ゴシック\>..うぇえええ～～ん,","<TYPE interval=70 style=Fade><FONT size=18 face=""ＭＳ ゴシック\>･･････呜哇哇哇〜〜嗯，"
+1-16.txt,250,沙友セリフ◇うええ,"<TYPE interval=70 style=Fade><FONT size=18 face=""ＭＳ ゴシック\>..うぇえええ～～ん,","<TYPE interval=70 style=Fade><FONT size=18 face=""ＭＳ ゴシック\>..呜哇哇哇〜〜嗯,"
 1-16.txt,260,沙友セリフ◇こわ,"<TYPE interval=50 style=Fade><FONT size=20 face=""ＭＳ ゴシック\>こわかたようぅぅ","<TYPE interval=50 style=Fade><FONT size=20 face=""ＭＳ ゴシック\>好可怕呀呜呜"
-1-17.txt,24,品藤セリフ◇無言,...<TYPE interval=90>･･････,･･････<TYPE interval=90>･･････
+1-17.txt,24,品藤セリフ◇無言,...<TYPE interval=90>･･････,...<TYPE interval=90>･･････
 1-17.txt,33,津名川セリフ◇やあ,やあ,哟
-1-17.txt,37,津名川セリフ◇ケガ,<TYPE interval=50>･･････</TYPE><TYPE interval=75>...ケガは？,<TYPE interval=50>･･････</TYPE><TYPE interval=75>･･････受伤了吗？
+1-17.txt,37,津名川セリフ◇ケガ,<TYPE interval=50>･･････</TYPE><TYPE interval=75>...ケガは？,<TYPE interval=50>･･････</TYPE><TYPE interval=75>...受伤了吗？
 1-17.txt,44,品藤セリフ◇ない,"<TYPE interval=65>ないわ,<BR><TYPE interval=73>ちょっと転んだだけ","<TYPE interval=65>没事,<BR><TYPE interval=73>只是稍微跌了一下"
 1-17.txt,62,津名川セリフ◇･･････,<TYPE interval=60>･･････,<TYPE interval=60>･･････
-1-17.txt,69,津名川セリフ◇酷い,<TYPE interval=85>ロビー.......<BR>酷い有様だったな,<TYPE interval=85>大厅･･････<BR>真是惨不忍睹啊
-1-17.txt,89,品藤セリフ◇あの子達,<TYPE interval=50>･･･</TYPE>あの子たちは？,<TYPE interval=50>･･････</TYPE>那些孩子呢？
-1-17.txt,93,津名川セリフ◇大丈夫,<TYPE interval=110>大丈夫...<BR>むこうで着替えて,<TYPE interval=110>没事･･････<BR>她们在那边换衣服
+1-17.txt,69,津名川セリフ◇酷い,<TYPE interval=85>ロビー.......<BR>酷い有様だったな,<TYPE interval=85>大厅.......<BR>真是惨不忍睹啊
+1-17.txt,89,品藤セリフ◇あの子達,<TYPE interval=50>･･･</TYPE>あの子たちは？,<TYPE interval=50>･･･</TYPE>那些孩子呢？
+1-17.txt,93,津名川セリフ◇大丈夫,<TYPE interval=110>大丈夫...<BR>むこうで着替えて,<TYPE interval=110>没事...<BR>她们在那边换衣服
 1-17.txt,109,津名川セリフ◇驚き,"<FONT size=20 face=""MS ゴシック"">！","<FONT size=20 face=""MS ゴシック"">！"
 1-17.txt,125,沙友セリフ◇ばくはつ,"<TYPE interval=20><FONT size=18 face=""MS ゴシック"">ばくはつしたあ！","<TYPE interval=20><FONT size=18 face=""MS ゴシック"">爆炸了——！"
-1-17.txt,132,エマセリフ◇爆弾,<TYPE interval=60>･･･</TYPE><TYPE interval=75>..爆弾...<BR>かかえてたんだ,<TYPE interval=60>･･････</TYPE><TYPE interval=75>･･････炸弹･･････<BR>她怀里抱着炸弹
-1-17.txt,162,津名川セリフ◇燃え,"<TYPE interval=60>･･･</TYPE>..<TYPE interval=80>燃えてるな,.</TYPE><BR>研究所..<TYPE interval=60>･･････",<TYPE interval=60>･･････</TYPE>･･････<TYPE interval=80>烧起来了。</TYPE><BR>研究所･･････<TYPE interval=60>･･････
+1-17.txt,132,エマセリフ◇爆弾,<TYPE interval=60>･･･</TYPE><TYPE interval=75>..爆弾...<BR>かかえてたんだ,<TYPE interval=60>･･･</TYPE><TYPE interval=75>..炸弹...<BR>她怀里抱着炸弹
+1-17.txt,162,津名川セリフ◇燃え,"<TYPE interval=60>･･･</TYPE>..<TYPE interval=80>燃えてるな,.</TYPE><BR>研究所..<TYPE interval=60>･･････","<TYPE interval=60>･･･</TYPE>..<TYPE interval=80>烧起来了,.</TYPE><BR>研究所..<TYPE interval=60>･･････"
 1-17.txt,166,品藤セリフ◇燃,燃えてるわね,烧起来了呢
 1-17.txt,178,津名川セリフ◇明日,明日からどうするんだ？,明天以后打算怎么办？
 1-17.txt,184,品藤セリフ◇知らない,知らないわよ,我哪知道啊
@@ -568,7 +568,7 @@ SELECT.txt,14,選択13,おまけ,Extra
 2-00.txt,20,部下セリフ◇問題,"問題ありません,<BR>このまま落ち着くでしょう","没有问题,<BR>照这样下去就能稳定下来。"
 2-00.txt,24,スパッドセリフ◇よし,よし<TYPE interval=30>･･････,好<TYPE interval=30>･･････
 2-00.txt,28,スパッドセリフ◇いい仕事,"いい仕事だったな,<BR>やっとココまで来た","干得不错,<BR>终于走到这一步了。"
-2-00.txt,45,スパッドセリフ◇それから,<TYPE interval=30>･･････</TYPE>それから例のビデオ....<BR>解析を急がせろ,<TYPE interval=30>･･････</TYPE>还有那段录像･･････<BR>加快解析。
+2-00.txt,45,スパッドセリフ◇それから,<TYPE interval=30>･･････</TYPE>それから例のビデオ....<BR>解析を急がせろ,<TYPE interval=30>･･････</TYPE>还有那段录像....<BR>加快解析。
 2-00.txt,49,スパッドセリフ◇おそらく,おそらくEX云々とかいう<BR>計画の産物だ,恐怕就是那个<BR>所谓的EX计划的产物。
 2-00.txt,60,スパッドセリフ◇あの力,あの力...<BR>使えるなら面白い,那股力量･･････<BR>若能加以利用，倒是有趣。
 2-00.txt,64,スパッドセリフ◇使えぬ,<TYPE interval=30>･･････</TYPE><TYPE interval=80>使えぬなら<BR>折らねばならん,"<TYPE interval=30>･･････</TYPE><TYPE interval=80>若不能为我所用,<BR>便只能将其摧毁。"
@@ -7138,7 +7138,7 @@ P01_02.txt,565,ME_48,<TYPE style=Normal>あ　はーい</TYPE>,<TYPE style=Norma
 P01_03.txt,10,ME_01,<TYPE style=Normal>はい</TYPE>,<TYPE style=Normal>是</TYPE>
 P01_03.txt,12,ME_02,<TYPE style=Normal>ありがとう<BR>ございます</TYPE>,<TYPE style=Normal>谢谢<BR>您</TYPE>
 P01_03.txt,36,ME_01,<TYPE style=Normal><FONT face='G' size=22>だれですー？</TYPE>,<TYPE style=Normal><FONT face='G' size=22>是谁呀——？</TYPE>
-P01_03.txt,38,ME_02,"<TYPE style=Normal>うん　..郵便屋さん<BR>,クリスマスカードみたい</TYPE>","<TYPE style=Normal>嗯 ..是投递员<BR>,好像是圣诞卡片</TYPE>"
+P01_03.txt,38,ME_02,"<TYPE style=Normal>うん　..郵便屋さん<BR>,クリスマスカードみたい</TYPE>","<TYPE style=Normal>嗯 ..是送货员<BR>,好像是圣诞卡片</TYPE>"
 P01_03.txt,40,ME_04,"<TYPE style=Normal>誰からかな･･･,<BR>えーっと...　最初のは･･･</TYPE>","<TYPE style=Normal>是谁寄来的呢･･･,<BR>那个... 第一张是･･･</TYPE>"
 P01_03.txt,86,ME_01,"<FONT color=white shadow=black><TYPE style=Normal>元気ですか。,僕は...<B>スパッド</B>です。,.<BR>君たちには今年、本当にお世話になったね。","<FONT color=white shadow=black><TYPE style=Normal>你们好吗。,我是...<B>斯帕德</B>。,.<BR>今年真是太谢谢你们的照顾了。"
 P01_03.txt,88,ME_02,"<FONT color=white shadow=black><TYPE style=Normal>僕は今、,北の果ての牧場で<BR>牛を飼いながら、..<BR>ひっそりと暮らしています。","<FONT color=white shadow=black><TYPE style=Normal>我现在，,在北方尽头的牧场里<BR>一边养牛，..<BR>一边安静地生活着。"
