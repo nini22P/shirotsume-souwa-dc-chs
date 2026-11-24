@@ -2,8 +2,8 @@ import argparse, csv
 from pathlib import Path
 
 TEX_CONFIGS = [
-    (2, 13, 14, 11, 18, 22, '18x22'),
-    (17, 32, 12, 10, 20, 24, '20x24'),
+    (57, 75, 14, 11, 18, 22, '18x22'),
+    (76, 99, 12, 10, 20, 24, '20x24'),
     (14, 16, 14, 11, 18, 22, '18x22_face'),
     (33, 36, 12, 10, 20, 24, '20x24_face'),
 ]
@@ -34,7 +34,7 @@ def main():
                     break
                 entry = rows[idx]
                 ch = entry['char'] if entry['char'] else entry['target_jp']
-                if ch == '\uFFFD':
+                if not ch or ch == '\uFFFD':
                     ch = '\u00B7'
                 c = cell % cols
                 if c == 0:

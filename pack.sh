@@ -35,6 +35,8 @@ python create_mapping.py -s scr.csv -b bin.csv -o build/mapping.csv
 
 python patch_tool.py -b "raw/data/1ST_READ.BIN" -c "bin.csv" -e cp932 -m "build/mapping.csv" -o "build/data/1ST_READ.BIN"
 
+python patch_1st_read.py -i "build/data/1ST_READ.BIN" -o "build/data/1ST_READ.BIN"
+
 python patch_encoding.py -b "build/data/1ST_READ.BIN" -c "build/mapping.csv"
 
 echo "Import translations -> build/SCR/"
@@ -56,17 +58,14 @@ rebuild_syspvr_mrg() {
     local raw_mrg="raw/data/${mrg_name}.MRG"
     local out_mrg="build/data/${mrg_name}.MRG"
     local work_dir="build/${mrg_name}"
-    rm -rf "$work_dir"; mkdir -p "$work_dir"
+    rm -rf "$work_dir"
+    python -m mrg_tool syspvr unpack -i "$raw_mrg" -o "$work_dir"
+    echo "Unpack ${mrg_name}.MRG -> $work_dir/"
 
-    if [ ! -d "$work_dir" ]; then
-        python -m mrg_tool syspvr unpack -i "$raw_mrg" -o "$work_dir"
-        echo "Unpack ${mrg_name}.MRG -> $work_dir/"
-    fi
-
-    python generate_texture.py -i build/18x22.txt --page-start 2 \
+    python generate_texture.py -i build/18x22.txt --page-start 57 \
         --cell-w 18 --cell-h 22 --font "$default_font" --font-size 40 \
-        --scale-x 0.95 --offset-y 8 -o "$work_dir"
-    python generate_texture.py -i build/20x24.txt --page-start 17 \
+        --scale-x 0.95 --offset-y 8 --shrink-pages 2-13,17-32 -o "$work_dir"
+    python generate_texture.py -i build/20x24.txt --page-start 76 \
         --cell-w 20 --cell-h 24 --font "$default_font" --font-size 46 \
         --scale-x 0.95 --offset-y 9 -o "$work_dir"
 

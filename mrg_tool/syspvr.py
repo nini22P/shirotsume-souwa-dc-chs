@@ -96,7 +96,7 @@ def _extract_blocks(rgba: bytes, width: int, height: int) -> np.ndarray:
 
 
 def _kmeans_init(x: np.ndarray, blocks_u8: np.ndarray, n_codebook: int) -> np.ndarray:
-    """使用加权欧氏距离的最远点采样初始化码本，复杂度 O(K * N_sample)。"""
+    """在唯一块上使用加权欧氏距离的最远点采样初始化码本，复杂度 O(K * N_sample)。"""
     n_blocks = x.shape[0]
     centroids = np.empty((n_codebook, 16), dtype=np.float32)
 
@@ -104,8 +104,8 @@ def _kmeans_init(x: np.ndarray, blocks_u8: np.ndarray, n_codebook: int) -> np.nd
     first = int(np.argmax(alpha_var))
     centroids[0] = x[first]
 
-    step = max(1, n_blocks // 2048)
-    sample = x[::step][:2048]
+    step = max(1, n_blocks // 4096)
+    sample = x[::step][:4096]
     min_dist = np.full(sample.shape[0], np.inf, dtype=np.float32)
 
     for ci in range(1, n_codebook):
@@ -120,13 +120,13 @@ def _kmeans_init(x: np.ndarray, blocks_u8: np.ndarray, n_codebook: int) -> np.nd
 
 
 def _kmeans(
-    x: np.ndarray, centroids: np.ndarray, max_iter: int = 30
-) -> tuple[np.ndarray, np.ndarray]:
-    """基于矩阵乘法的加权 K-means，支持收敛早停。"""
+    x: np.ndarray, counts: np.ndarray, centroids: np.ndarray, max_iter: int = 30
+) -> np.ndarray:
+    """基于矩阵乘法的频次加权 K-means，支持收敛早停。"""
     k = centroids.shape[0]
     x_norm2 = np.einsum('ij,ij->i', x, x)[:, None]
+    w_counts = counts.astype(np.float64)
     prev_labels: np.ndarray | None = None
-    labels = np.empty(x.shape[0], dtype=np.intp)
 
     for _ in range(max_iter):
         c_norm2 = np.einsum('ij,ij->i', centroids, centroids)
@@ -136,16 +136,13 @@ def _kmeans(
             break
         prev_labels = labels
 
-        counts = np.bincount(labels, minlength=k)
-        non_empty = counts > 0
+        cluster_w = np.bincount(labels, weights=w_counts, minlength=k)
+        non_empty = cluster_w > 0
         for d in range(16):
-            sums = np.bincount(labels, weights=x[:, d], minlength=k)
-            centroids[non_empty, d] = sums[non_empty] / counts[non_empty]
-    else:
-        c_norm2 = np.einsum('ij,ij->i', centroids, centroids)
-        labels = np.argmin(x_norm2 + c_norm2[None, :] - 2.0 * (x @ centroids.T), axis=1)
+            sums = np.bincount(labels, weights=x[:, d] * w_counts, minlength=k)
+            centroids[non_empty, d] = (sums[non_empty] / cluster_w[non_empty]).astype(np.float32)
 
-    return centroids, labels.astype(np.uint8)
+    return centroids
 
 
 def encode_vq(rgba: bytes, fmt: int, data_fmt: int, width: int, height: int) -> bytes:
@@ -158,23 +155,33 @@ def encode_vq(rgba: bytes, fmt: int, data_fmt: int, width: int, height: int) -> 
 
     blocks_u8 = _extract_blocks(rgba, width, height)
     n_blocks = blocks_u8.shape[0]
+    uniq_u8, inv, counts = np.unique(blocks_u8, axis=0, return_inverse=True, return_counts=True)
+    n_uniq = uniq_u8.shape[0]
 
-    if n_codebook >= n_blocks:
+    if n_uniq <= n_codebook:
         codebook_u8 = np.zeros((n_codebook, 4, 4), dtype=np.uint8)
-        b4 = blocks_u8.reshape(n_blocks, 4, 4)
-        codebook_u8[:n_blocks] = b4
-        if n_codebook > n_blocks:
-            codebook_u8[n_blocks:] = b4[: n_codebook - n_blocks]
-        labels = np.arange(n_blocks, dtype=np.uint8)
+        u4 = uniq_u8.reshape(n_uniq, 4, 4)
+        codebook_u8[:n_uniq] = u4
+        if n_codebook > n_uniq:
+            codebook_u8[n_uniq:] = u4[0]
+        cb_u16 = _encode_colors(codebook_u8, fmt)
+        labels = inv.astype(np.uint8)
     else:
-        x = blocks_u8.astype(np.float32) * _SQRT_WEIGHTS
-        init_c = _kmeans_init(x, blocks_u8, n_codebook)
-        centroids, labels = _kmeans(x, init_c)
+        x = uniq_u8.astype(np.float32) * _SQRT_WEIGHTS
+        init_c = _kmeans_init(x, uniq_u8, n_codebook)
+        centroids = _kmeans(x, counts, init_c)
         codebook_u8 = np.clip(np.rint(centroids / _SQRT_WEIGHTS), 0, 255).astype(np.uint8).reshape(
             n_codebook, 4, 4
         )
+        # 量化感知重分配：用量化后的实际硬件色值重新匹配每个唯一块
+        cb_u16 = _encode_colors(codebook_u8, fmt)
+        cb_hw = _decode_colors(cb_u16, fmt).reshape(n_codebook, 16).astype(np.float32) * _SQRT_WEIGHTS
+        x_norm2 = np.einsum('ij,ij->i', x, x)[:, None]
+        c_norm2 = np.einsum('ij,ij->i', cb_hw, cb_hw)
+        uniq_labels = np.argmin(x_norm2 + c_norm2[None, :] - 2.0 * (x @ cb_hw.T), axis=1).astype(np.uint8)
+        labels = uniq_labels[inv]
 
-    cb_bytes = _encode_colors(codebook_u8, fmt).tobytes()
+    cb_bytes = cb_u16.tobytes()
     tmap = _twiddle_map(width // 2, height // 2)
     twiddled = np.zeros(max(n_blocks, int(tmap.max()) + 1), dtype=np.uint8)
     twiddled[tmap] = labels

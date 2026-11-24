@@ -1,6 +1,6 @@
 import argparse, csv, re, sys, unicodedata
 from pathlib import Path
-from sbox import load_sjis_table, sjis_to_char
+from sbox import MAIN_FONT_SLOTS, load_sjis_table, sjis_to_char
 
 TAG_RE = re.compile(r'<[^>]*>')
 
@@ -106,6 +106,7 @@ def main() -> int:
             continue
         if ch in trans_chars and ch not in face_chars:
             continue
+    for idx in range(len(sjis_table), MAIN_FONT_SLOTS):
         extended_slots.append(idx)
 
     def iter_unused_sjis():
@@ -144,14 +145,14 @@ def main() -> int:
     with out_path.open('w', newline='', encoding='utf-8') as f:
         w = csv.writer(f)
         w.writerow(['enc_idx', 'char', 'unicode', 'target_jp', 'sjis_hi', 'sjis_lo'])
-        for idx in range(len(sjis_table)):
+        for idx in range(MAIN_FONT_SLOTS):
             cn_char = slot_to_char.get(idx, '')
-            target_jp = dc_chars[idx]
+            target_jp = dc_chars[idx] if idx < len(dc_chars) else ''
             if idx in slot_to_custom:
                 code = slot_to_custom[idx]
                 sj_bytes = (code >> 8, code & 0xFF)
             else:
-                sj_bytes = sjis_table[idx]
+                sj_bytes = sjis_table[idx] if idx < len(sjis_table) else (0, 0)
             w.writerow([
                 idx,
                 cn_char,
@@ -160,7 +161,7 @@ def main() -> int:
                 sj_bytes[0],
                 sj_bytes[1],
             ])
-    print(f'Mapping: {out_path} ({len(sjis_table)} slots, {len(slot_to_char)} mapped)')
+    print(f'Mapping: {out_path} ({MAIN_FONT_SLOTS} slots, {len(slot_to_char)} mapped)')
     return 0
 
 if __name__ == '__main__':

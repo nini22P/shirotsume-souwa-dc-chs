@@ -3,7 +3,7 @@ from pathlib import Path
 LOAD_BASE = 0x8C010000
 SJIS_TABLE_VA = 0x8C09FE00
 SJIS_TABLE_LEN = 0x071C
-MAIN_FONT_SLOTS = 1808
+MAIN_FONT_SLOTS = 2880
 CODE_BASE = 0xA8
 TRAIL_ORDER = tuple(range(0x41, 0x5B)) + tuple(range(0x61, 0x7B))
 DEFAULT_BIN_PATH = Path(__file__).resolve().parent / 'raw' / 'data' / '1ST_READ.BIN'
