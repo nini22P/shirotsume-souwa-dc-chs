@@ -1,9 +1,20 @@
+import os
 import struct
 
 SECTOR = 2048
 
 
-def xor_crypt(data):
+def hed_path(mrg_path: str) -> str:
+    root, _ = os.path.splitext(mrg_path)
+    return root + '.HED'
+
+
+def nam_path(mrg_path: str) -> str:
+    root, _ = os.path.splitext(mrg_path)
+    return root + '.NAM'
+
+
+def xor_crypt(data: bytes) -> bytes:
     res = bytearray(len(data))
     key = 0x6C
     for i, b in enumerate(data):
@@ -12,7 +23,7 @@ def xor_crypt(data):
     return bytes(res)
 
 
-def parse_hed_entry(entry):
+def parse_hed_entry(entry: bytes) -> tuple[int, int] | None:
     off_low, off_high, sz_low, sz_high = struct.unpack_from('<HHHH', entry, 0)
     if off_low == 0xFFFF and off_high == 0xFFFF:
         return None
@@ -23,7 +34,7 @@ def parse_hed_entry(entry):
     return offset, size
 
 
-def encode_hed_entry(offset, size):
+def encode_hed_entry(offset: int, size: int) -> bytes:
     sector = offset >> 11
     off_low = sector & 0xFFFF
     off_high = (sector - off_low) >> 4
@@ -32,30 +43,30 @@ def encode_hed_entry(offset, size):
     return struct.pack('<HHHH', off_low, off_high, sz_low, sz_high)
 
 
-def read_hed_entries(path):
+def read_hed_entries(path: str) -> list[tuple[int, int]]:
     with open(path, 'rb') as f:
         hed = f.read()
-    entries = []
+    entries: list[tuple[int, int]] = []
     for i in range(0, len(hed), 8):
-        e = parse_hed_entry(hed[i:i + 8])
+        e = parse_hed_entry(hed[i : i + 8])
         if e is None:
             continue
         entries.append(e)
     return entries
 
 
-def parse_nam(data, count):
-    names = []
+def parse_nam(data: bytes, count: int) -> list[str]:
+    names: list[str] = []
     esize = len(data) // count if count else 32
     for i in range(count):
-        chunk = data[i * esize:(i + 1) * esize]
+        chunk = data[i * esize : (i + 1) * esize]
         null = chunk.find(b'\x00')
         name = chunk[:null].decode('cp932', errors='replace') if null >= 0 else ''
         names.append(name)
     return names
 
 
-def build_nam(names):
+def build_nam(names: list[str]) -> bytes:
     buf = bytearray()
     for name in names:
         enc = name.encode('cp932', errors='replace') + b'\x00'

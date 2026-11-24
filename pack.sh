@@ -23,7 +23,7 @@ fi
 echo "Unpack scripts -> build/SCR/"
 rm -rf "build/SCR"
 mkdir -p "build/SCR"
-python scr_tool.py unpack -i "raw/data/SCR.MRG" -o "build/SCR"
+python -m mrg_tool scr unpack -i "raw/data/SCR.MRG" -o "build/SCR"
 
 if [ ! -f "scr.csv" ]; then
     echo "Extract strings -> scr.csv"
@@ -41,10 +41,10 @@ echo "Import translations -> build/SCR/"
 python script_tool.py import -i "build/SCR" -c "scr.csv" -m "build/mapping.csv"
 
 echo "Repack scripts (encrypt) -> build/data/"
-python scr_tool.py repack -i "build/SCR" -o "build/data/SCR.MRG"
+python -m mrg_tool scr repack -i "build/SCR" -o "build/data/SCR.MRG"
 
 echo "Rebuild SCRADR offsets"
-python scradr_tool.py rebuild -i "raw/data/SCRADR.MRG" -o "build/data/SCRADR.MRG"
+python -m mrg_tool scradr rebuild -i "raw/data/SCRADR.MRG" -o "build/data/SCRADR.MRG"
 
 python create_layouts.py -m build/mapping.csv -o build/
 echo "Layouts generated -> build/"
@@ -58,8 +58,10 @@ rebuild_syspvr_mrg() {
     local work_dir="build/${mrg_name}"
     rm -rf "$work_dir"; mkdir -p "$work_dir"
 
-    python syspvr_tool.py unpack -i "$raw_mrg" -o "$work_dir"
-    echo "Unpack ${mrg_name}.MRG -> $work_dir/"
+    if [ ! -d "$work_dir" ]; then
+        python -m mrg_tool syspvr unpack -i "$raw_mrg" -o "$work_dir"
+        echo "Unpack ${mrg_name}.MRG -> $work_dir/"
+    fi
 
     python generate_texture.py -i build/18x22.txt --page-start 2 \
         --cell-w 18 --cell-h 22 --font "$default_font" --font-size 40 \
@@ -75,7 +77,7 @@ rebuild_syspvr_mrg() {
         --cell-w 20 --cell-h 24 --font "$face_font" --font-size 46 \
         --scale-x 0.95 --offset-y 9 -o "$work_dir"
 
-    python syspvr_tool.py pack -i "$work_dir" -o "$out_mrg"
+    python -m mrg_tool syspvr pack -i "$work_dir" -o "$out_mrg"
 }
 
 rebuild_syspvr_mrg "SYSPVR"   "fonts/ChillDuanHeiSongBold.otf" "fonts/NotoSansCJKsc-Medium.otf"
@@ -90,7 +92,7 @@ cp -f "raw/gdi/track01.bin" "raw/gdi/track02.raw" "build/gdi/"
 ./bin/buildgdi.exe -rebuild -gdi "raw/gdi/disc.gdi" -data "build/data/" -output "build/gdi/"
 echo "Built GDI -> build/gdi/"
 
-echo "Generating xdelta patch for track03.bin..."
-./bin/xdelta3.exe -f -e -s "raw/gdi/track03.bin" "build/gdi/track03.bin" "build/gdi/track03.bin.xdelta"
+# echo "Generating xdelta patch for track03.bin..."
+# ./bin/xdelta3.exe -f -e -s "raw/gdi/track03.bin" "build/gdi/track03.bin" "build/gdi/track03.bin.xdelta"
 
 echo "Done."

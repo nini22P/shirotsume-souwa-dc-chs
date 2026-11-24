@@ -1,9 +1,10 @@
-import argparse, os, re
+import os
+import re
 from collections import defaultdict
-from mrg import xor_crypt, read_hed_entries
+from .common import read_hed_entries, xor_crypt
 
 
-def _find_mrg(directory, name, ext):
+def _find_mrg(directory: str, name: str, ext: str) -> str:
     parent = os.path.dirname(directory) if not os.path.isdir(directory) else directory
     path = os.path.join(parent, f'{name}.{ext}')
     if not os.path.exists(path):
@@ -11,7 +12,7 @@ def _find_mrg(directory, name, ext):
     return path
 
 
-def rebuild(in_path, out_path):
+def rebuild(in_path: str, out_path: str) -> None:
     in_dir = os.path.dirname(in_path)
     out_dir = os.path.dirname(out_path)
 
@@ -27,7 +28,7 @@ def rebuild(in_path, out_path):
     text_start = 8 + count * 8
 
     orig_text = scradr_data[text_start:]
-    line_starts = []
+    line_starts: list[int] = []
     pos = 0
     while pos < len(orig_text):
         line_starts.append(pos)
@@ -36,7 +37,7 @@ def rebuild(in_path, out_path):
             break
         pos = nl + 1
 
-    orig_entries = []
+    orig_entries: list[tuple[bytes, int, int, int]] = []
     for line_off in line_starts:
         line = orig_text[line_off:]
         nl = line.find(b'\n')
@@ -52,21 +53,21 @@ def rebuild(in_path, out_path):
             continue
         label = bytes(line[:space].rstrip().lstrip(b'\xff'))
         try:
-            mod = int(line[space + 1:comma], 16)
-            off = int(line[comma + 1:], 16)
+            mod = int(line[space + 1 : comma], 16)
+            off = int(line[comma + 1 :], 16)
             orig_entries.append((label, mod, off, line_off))
         except ValueError:
             continue
 
     print(f'SCRADR: {len(orig_entries)} labels across {count} entries')
 
-    def build_label_map(hed_path, mrg_path):
-        m = {}
-        hed_entries = read_hed_entries(hed_path)
-        with open(mrg_path, 'rb') as f:
+    def build_label_map(hed_p: str, mrg_p: str) -> dict[tuple[bytes, int, int], int]:
+        m: dict[tuple[bytes, int, int], int] = {}
+        hed_entries = read_hed_entries(hed_p)
+        with open(mrg_p, 'rb') as f:
             mrg = f.read()
         for ei, (eoff, esz) in enumerate(hed_entries):
-            data = xor_crypt(mrg[eoff:eoff + esz])
+            data = xor_crypt(mrg[eoff : eoff + esz])
             for match in re.finditer(rb'_ZZ([0-9a-fA-F]{5})\(([^)]+)\)', data):
                 label = match.group(2)
                 mod = int(match.group(1)[:3], 16)
@@ -76,12 +77,12 @@ def rebuild(in_path, out_path):
 
     orig_idx = build_label_map(orig_hed, orig_mrg)
 
-    new_map = defaultdict(dict)
+    new_map: dict[int, dict[tuple[bytes, int], int]] = defaultdict(dict)
     new_hed_entries = read_hed_entries(new_hed)
     with open(new_mrg, 'rb') as f:
         new_mrg_data = f.read()
     for ei, (eoff, esz) in enumerate(new_hed_entries):
-        data = xor_crypt(new_mrg_data[eoff:eoff + esz])
+        data = xor_crypt(new_mrg_data[eoff : eoff + esz])
         for match in re.finditer(rb'_ZZ([0-9a-fA-F]{5})\(([^)]+)\)', data):
             label = match.group(2)
             mod = int(match.group(1)[:3], 16)
@@ -91,7 +92,7 @@ def rebuild(in_path, out_path):
     found = 0
     not_found = 0
     changed = 0
-    changes = []
+    changes: list[tuple[int, int, int]] = []
 
     for label, mod, old_off, line_off in orig_entries:
         key = (label, mod, old_off)
@@ -115,32 +116,11 @@ def rebuild(in_path, out_path):
         if line_end < 0:
             line_end = len(scradr_data)
         for check in range(line_end - 5, line_start - 1, -1):
-            if scradr_data[check:check + 5] == old_hex:
-                scradr_data[check:check + 5] = new_hex
+            if scradr_data[check : check + 5] == old_hex:
+                scradr_data[check : check + 5] = new_hex
                 break
 
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     with open(out_path, 'wb') as f:
         f.write(scradr_data)
     print(f'Written: {out_path} ({len(scradr_data)} bytes, {changed} offsets updated)')
-
-
-def main():
-    p = argparse.ArgumentParser(description='SCRADR tool')
-    sub = p.add_subparsers(dest='command', required=True)
-
-    p_rebuild = sub.add_parser('rebuild', help='Rebuild SCRADR.MRG with updated label offsets')
-    p_rebuild.add_argument('-i', '--input', required=True, help='Input SCRADR.MRG')
-    p_rebuild.add_argument('-o', '--output', required=True, help='Output SCRADR.MRG')
-
-    args = p.parse_args()
-
-    match args.command:
-        case 'rebuild':
-            rebuild(args.input, args.output)
-        case _:
-            p.print_help()
-
-
-if __name__ == '__main__':
-    main()
