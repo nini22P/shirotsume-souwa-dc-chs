@@ -1,7 +1,9 @@
 import os
 import struct
 from collections import Counter
+from concurrent.futures import Future, ThreadPoolExecutor
 import numpy as np
+from numba import njit
 from PIL import Image
 from .common import SECTOR, encode_hed_entry, hed_path, nam_path, parse_nam, read_hed_entries
 
@@ -34,14 +36,13 @@ _T43_SNAP_LUT = np.array(
 )
 
 _RGBA_OPAQUE_BLACK: int = struct.unpack('=I', b'\x00\x00\x00\xff')[0]
-_STRUCT_U16_BE = [struct.Struct(f'>{n}H') for n in range(65)]
-_COLOR_LUTS: dict[int, list[int]] = {}
-_LUT43: list[int] | None = None
+_COLOR_LUTS: dict[int, np.ndarray] = {}
+_LUT43: np.ndarray | None = None
 
 
 # ---------- 像素格式查找表（主机字节序 uint32 = RGBA） ----------
 
-def _get_color_lut(fmt: int) -> list[int]:
+def _get_color_lut(fmt: int) -> np.ndarray:
     kind = fmt & 0xF0
     if kind in _COLOR_LUTS:
         return _COLOR_LUTS[kind]
@@ -74,12 +75,12 @@ def _get_color_lut(fmt: int) -> list[int]:
         rgba[:, 2] = (v & 0xF) * 0x11
         rgba[:, 3] = ((v >> 12) & 0xF) * 0x11
 
-    lut = rgba.view(np.uint32).ravel().tolist()
+    lut = np.ascontiguousarray(rgba.view(np.uint32).ravel())
     _COLOR_LUTS[kind] = lut
     return lut
 
 
-def _get_lut43() -> list[int]:
+def _get_lut43() -> np.ndarray:
     global _LUT43
     if _LUT43 is not None:
         return _LUT43
@@ -89,7 +90,7 @@ def _get_lut43() -> list[int]:
     rgba[:, 1] = ((v >> 4) & 0xF) * 0x11
     rgba[:, 2] = (v & 0xF) * 0x11
     rgba[:, 3] = 0xFF
-    _LUT43 = rgba.view(np.uint32).ravel().tolist()
+    _LUT43 = np.ascontiguousarray(rgba.view(np.uint32).ravel())
     return _LUT43
 
 
@@ -131,180 +132,223 @@ def _is_image(blob: bytes) -> bool:
     )
 
 
-def _decode_image(blob: bytes) -> tuple[int, int, int, np.ndarray]:
-    w_buf, w, h, fmt = _img_header(blob)
-    npix = w_buf * 64
-    out = [0] * npix
+@njit(cache=True)
+def _njit_decode_image(
+    blob: np.ndarray,
+    npix: int,
+    k: int,
+    is_43: bool,
+    lut: np.ndarray,
+    default_px: np.uint32,
+) -> tuple[np.ndarray, int]:
+    out = np.zeros(npix, dtype=np.uint32)
+    hist = np.zeros(64, dtype=np.uint32)
+    n = blob.shape[0]
     si = 13
-    n = len(blob)
     oi = 0
-    hist = [0] * 64
     hb = 0
-    default_px = _RGBA_OPAQUE_BLACK if (fmt < 0x10 or fmt == 0x43) else 0
-    k = 128 if (fmt & 0x0F) == 2 else 64
-    is_43 = fmt == 0x43
-    lut = _get_lut43() if is_43 else _get_color_lut(fmt)
-    carry: int | None = None
+    carry = -1
 
     while oi < npix:
         if si >= n:
-            raise ValueError('truncated stream')
-        b = blob[si]
+            return out, 1
+        b = int(blob[si])
         si += 1
-        if carry is not None:
+        if carry >= 0:
             ctrl = (carry << 4) | (b >> 4)
             carry = b & 0xF
         else:
             ctrl = b
         run = (ctrl >> 2) + 1
         op = ctrl & 3
+
         if op == 0:
             fill = default_px if oi == 0 else out[oi - 1]
-            end = min(oi + run, npix)
-            out[oi:end] = [fill] * (end - oi)
-            oi = end
+            end = oi + run
+            if end > npix:
+                end = npix
+            while oi < end:
+                out[oi] = fill
+                oi += 1
         elif op == 1:
-            end = min(oi + run, npix)
-            if oi >= k:
-                out[oi:end] = out[oi - k : end - k]
-                oi = end
-            else:
-                while oi < end:
-                    s = oi - k
-                    out[oi] = out[s] if s >= 0 else default_px
-                    oi += 1
+            end = oi + run
+            if end > npix:
+                end = npix
+            while oi < end:
+                s = oi - k
+                out[oi] = out[s] if s >= 0 else default_px
+                oi += 1
         elif op == 2:
             out[oi] = hist[(run - 1) & 63]
             oi += 1
         else:
-            end = min(oi + run, npix)
+            end = oi + run
+            if end > npix:
+                end = npix
             if is_43:
-                # 12-bit RGB444 半字节流：无进位读 2 字节留半字节，有进位读 1 字节凑齐 3 半字节
                 while oi < end:
-                    if carry is None:
-                        b1 = blob[si]
-                        b2 = blob[si + 1]
+                    if carry < 0:
+                        b1 = int(blob[si])
+                        b2 = int(blob[si + 1])
                         si += 2
                         c = lut[(b1 << 4) | (b2 >> 4)]
                         carry = b2 & 0xF
                     else:
-                        b1 = blob[si]
+                        b1 = int(blob[si])
                         si += 1
                         c = lut[(carry << 8) | b1]
-                        carry = None
+                        carry = -1
                     out[oi] = c
                     hist[hb] = c
                     hb = (hb + 1) & 63
                     oi += 1
             else:
-                cnt = end - oi
-                vals = _STRUCT_U16_BE[cnt].unpack_from(blob, si)
-                si += cnt * 2
-                for v in vals:
+                while oi < end:
+                    v = (int(blob[si]) << 8) | int(blob[si + 1])
+                    si += 2
                     c = lut[v]
                     out[oi] = c
                     hist[hb] = c
                     hb = (hb + 1) & 63
                     oi += 1
 
-    return w, h, fmt, np.array(out, dtype=np.uint32)
+    return out, 0
 
 
-def _encode_43(tiles_rgba: np.ndarray) -> bytes:
-    """0x43 压缩：保持控制字节字面相位，原始像素成对按 3 字节（6 nibble）输出。"""
-    pixels = np.ascontiguousarray(tiles_rgba).view(np.uint32).ravel().tolist()
-    nibbles = (tiles_rgba[:, :3] >> 4).tolist()
-    out = bytearray()
-    n = len(pixels)
+def _decode_image(blob: bytes) -> tuple[int, int, int, np.ndarray]:
+    w_buf, w, h, fmt = _img_header(blob)
+    npix = w_buf * 64
+    default_px = np.uint32(_RGBA_OPAQUE_BLACK if (fmt < 0x10 or fmt == 0x43) else 0)
+    k = 128 if (fmt & 0x0F) == 2 else 64
+    is_43 = fmt == 0x43
+    lut = _get_lut43() if is_43 else _get_color_lut(fmt)
+    out, err = _njit_decode_image(
+        np.frombuffer(blob, dtype=np.uint8), npix, k, is_43, lut, default_px
+    )
+    if err != 0:
+        raise ValueError('truncated stream')
+    return w, h, fmt, out
+
+
+@njit(cache=True)
+def _njit_find_slot(hist: np.ndarray, hb: int, p: int) -> int:
+    for step in range(1, 65):
+        idx = (hb - step) & 63
+        if hist[idx] == p:
+            return idx
+    return -1
+
+
+@njit(cache=True)
+def _njit_encode_43(pixels: np.ndarray, nibbles: np.ndarray) -> np.ndarray:
+    n = pixels.shape[0]
+    out = np.empty(n * 2 + 16, dtype=np.uint8)
+    oi = 0
     i = 0
     k = 64
-    hist: list[int | None] = [None] * 64
-    slot: dict[int, int] = {}
+    hist = np.full(64, -1, dtype=np.int64)
     hb = 0
-    pend_idx: int | None = None
+    pend_idx = -1
 
     while i < n:
-        if pend_idx is None:
+        if pend_idx < 0:
             best = 0
             kind = 0
-            if i:
+            if i > 0:
                 r = 0
                 prev = pixels[i - 1]
                 while r < 64 and i + r < n and pixels[i + r] == prev:
                     r += 1
                 if r > 1:
-                    best, kind = r, 0
+                    best = r
+                    kind = 0
             if i >= k and pixels[i] == pixels[i - k]:
                 r = 1
                 while r < 64 and i + r < n and pixels[i + r] == pixels[i - k + r]:
                     r += 1
                 if r > best:
-                    best, kind = r, 1
+                    best = r
+                    kind = 1
             if best > 1:
-                out.append(((best - 1) << 2) | kind)
+                out[oi] = ((best - 1) << 2) | kind
+                oi += 1
                 i += best
                 continue
-            q = slot.get(pixels[i])
-            if q is not None:
-                out.append((q << 2) | 2)
+            q = _njit_find_slot(hist, hb, int(pixels[i]))
+            if q >= 0:
+                out[oi] = (q << 2) | 2
+                oi += 1
                 i += 1
                 continue
             pend_idx = i
             i += 1
             continue
 
-        r0, g0, b0 = nibbles[pend_idx]
-        r1, g1, b1 = nibbles[i]
-        out += bytes((0x07, (r0 << 4) | g0, (b0 << 4) | r1, (g1 << 4) | b1))
-        for idx in (pend_idx, i):
-            p = pixels[idx]
-            old = hist[hb]
-            if old is not None and slot.get(old) == hb:
-                del slot[old]
-            hist[hb] = p
-            slot[p] = hb
-            hb = (hb + 1) & 63
-        pend_idx = None
+        r0 = int(nibbles[pend_idx, 0])
+        g0 = int(nibbles[pend_idx, 1])
+        b0 = int(nibbles[pend_idx, 2])
+        r1 = int(nibbles[i, 0])
+        g1 = int(nibbles[i, 1])
+        b1 = int(nibbles[i, 2])
+        out[oi] = 0x07
+        out[oi + 1] = (r0 << 4) | g0
+        out[oi + 2] = (b0 << 4) | r1
+        out[oi + 3] = (g1 << 4) | b1
+        oi += 4
+
+        hist[hb] = int(pixels[pend_idx])
+        hb = (hb + 1) & 63
+        hist[hb] = int(pixels[i])
+        hb = (hb + 1) & 63
+        pend_idx = -1
         i += 1
 
-    return bytes(out)
+    return out[:oi]
 
 
-def _encode_stream(tiles_rgba: np.ndarray, fmt: int) -> bytes:
-    """op0/op1/op2/op3 贪心压缩。"""
-    pixels = np.ascontiguousarray(tiles_rgba).view(np.uint32).ravel().tolist()
-    packed = _pack_pixels_be16(tiles_rgba, fmt)
-    out = bytearray()
-    n = len(pixels)
+def _encode_43(tiles_rgba: np.ndarray) -> bytes:
+    """0x43 压缩：保持控制字节字面相位，原始像素成对按 3 字节（6 nibble）输出。"""
+    pixels = np.ascontiguousarray(tiles_rgba).view(np.uint32).ravel()
+    nibbles = np.ascontiguousarray(tiles_rgba[:, :3] >> 4, dtype=np.uint8)
+    return _njit_encode_43(pixels, nibbles).tobytes()
+
+
+@njit(cache=True)
+def _njit_encode_stream(pixels: np.ndarray, packed: np.ndarray, k: int) -> np.ndarray:
+    n = pixels.shape[0]
+    out = np.empty(n * 3 + 16, dtype=np.uint8)
+    oi = 0
     i = 0
-    k = 128 if (fmt & 0x0F) == 2 else 64
-    hist: list[int | None] = [None] * 64
-    slot: dict[int, int] = {}
+    hist = np.full(64, -1, dtype=np.int64)
     hb = 0
 
     while i < n:
         best = 0
         kind = 0
-        if i:
+        if i > 0:
             r = 0
             prev = pixels[i - 1]
             while r < 64 and i + r < n and pixels[i + r] == prev:
                 r += 1
             if r > 1:
-                best, kind = r, 0
+                best = r
+                kind = 0
         if i >= k and pixels[i] == pixels[i - k]:
             r = 1
             while r < 64 and i + r < n and pixels[i + r] == pixels[i - k + r]:
                 r += 1
             if r > best:
-                best, kind = r, 1
+                best = r
+                kind = 1
         if best > 1:
-            out.append(((best - 1) << 2) | kind)
+            out[oi] = ((best - 1) << 2) | kind
+            oi += 1
             i += best
             continue
-        q = slot.get(pixels[i])
-        if q is not None:
-            out.append((q << 2) | 2)
+        q = _njit_find_slot(hist, hb, int(pixels[i]))
+        if q >= 0:
+            out[oi] = (q << 2) | 2
+            oi += 1
             i += 1
             continue
         j = i
@@ -313,24 +357,30 @@ def _encode_stream(tiles_rgba: np.ndarray, fmt: int) -> bytes:
                 break
             if j >= k and pixels[j] == pixels[j - k]:
                 break
-            if j > i and pixels[j] in slot:
+            if j > i and _njit_find_slot(hist, hb, int(pixels[j])) >= 0:
                 break
             j += 1
         if j == i:
             j = i + 1
-        out.append(((j - i - 1) << 2) | 3)
-        out += packed[i * 2 : j * 2]
+        out[oi] = ((j - i - 1) << 2) | 3
+        oi += 1
+        for m in range(i * 2, j * 2):
+            out[oi] = packed[m]
+            oi += 1
         while i < j:
-            p = pixels[i]
-            old = hist[hb]
-            if old is not None and slot.get(old) == hb:
-                del slot[old]
-            hist[hb] = p
-            slot[p] = hb
+            hist[hb] = int(pixels[i])
             hb = (hb + 1) & 63
             i += 1
 
-    return bytes(out)
+    return out[:oi]
+
+
+def _encode_stream(tiles_rgba: np.ndarray, fmt: int) -> bytes:
+    """op0/op1/op2/op3 贪心压缩。"""
+    pixels = np.ascontiguousarray(tiles_rgba).view(np.uint32).ravel()
+    packed = np.frombuffer(_pack_pixels_be16(tiles_rgba, fmt), dtype=np.uint8)
+    k = 128 if (fmt & 0x0F) == 2 else 64
+    return _njit_encode_stream(pixels, packed, k).tobytes()
 
 
 def _deblock(tiles_u32: np.ndarray, w: int, h: int) -> np.ndarray:
@@ -451,7 +501,7 @@ def _build_container(records: list[bytes]) -> bytes:
 # ---------- 文件与命名 ----------
 
 def _save_png(tiles_u32: np.ndarray, w: int, h: int, path: str) -> None:
-    Image.fromarray(_deblock(tiles_u32, w, h), 'RGBA').save(path)
+    Image.fromarray(_deblock(tiles_u32, w, h), 'RGBA').save(path, compress_level=1)
 
 
 def _safe_name(name: str) -> str:
@@ -537,7 +587,14 @@ def _base_index(
     return None
 
 
-def _unpack_items(items: list[bytes], keys: list[str], outdir: str, compose: bool) -> int:
+def _unpack_items(
+    items: list[bytes],
+    keys: list[str],
+    outdir: str,
+    compose: bool,
+    pool: ThreadPoolExecutor | None = None,
+    pending: list[Future[None]] | None = None,
+) -> int:
     os.makedirs(outdir, exist_ok=True)
     infos = [_img_header(b) if _is_image(b) else None for b in items]
 
@@ -560,7 +617,9 @@ def _unpack_items(items: list[bytes], keys: list[str], outdir: str, compose: boo
             if _is_container(blob):
                 sub = _split_container(blob)
                 sub_keys = [f'{j:04d}' for j in range(len(sub))]
-                count += _unpack_items(sub, sub_keys, os.path.join(outdir, keys[i]), compose)
+                count += _unpack_items(
+                    sub, sub_keys, os.path.join(outdir, keys[i]), compose, pool, pending
+                )
             else:
                 print(f'  WARN: {keys[i]}: unknown record, skipped')
             continue
@@ -601,7 +660,14 @@ def _unpack_items(items: list[bytes], keys: list[str], outdir: str, compose: boo
             else:
                 print(f'  WARN: {keys[i]}: 0x43 without 0x41 base, exported raw')
 
-        _save_png(tiles, w, h, os.path.join(outdir, keys[i] + '.png'))
+        out_path = os.path.join(outdir, keys[i] + '.png')
+        if pool is not None and pending is not None:
+            pending.append(pool.submit(_save_png, tiles, w, h, out_path))
+            # 限制排队上限避免大图堆占内存
+            if len(pending) >= 32:
+                pending.pop(0).result()
+        else:
+            _save_png(tiles, w, h, out_path)
         count += 1
         if count % 200 == 0:
             print(f'  ... {count}')
@@ -612,7 +678,11 @@ def _unpack_items(items: list[bytes], keys: list[str], outdir: str, compose: boo
 def unpack(src: str, outdir: str, compose: bool = True) -> None:
     _, items, keys, _ = _open_source(src)
     print(f'{len(items)} records -> {outdir}')
-    count = _unpack_items(items, keys, outdir, compose)
+    pending: list[Future[None]] = []
+    with ThreadPoolExecutor(max_workers=min(8, os.cpu_count() or 4)) as pool:
+        count = _unpack_items(items, keys, outdir, compose, pool, pending)
+        for fut in pending:
+            fut.result()
     print(f'done: {count} images')
 
 
