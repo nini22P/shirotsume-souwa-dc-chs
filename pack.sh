@@ -102,10 +102,12 @@ cp -f "build/data/SYSPVR.MRG" "build/data/SYSPVR_M.MRG"
 cp -f "build/data/SYSPVR.MRG" "build/data/SYSPVR_P.MRG"
 echo "SYSPVR_M.MRG, SYSPVR_P.MRG <- SYSPVR.MRG (copy)"
 
+python -m mrg_tool img replace -i raw/data/FUKI.MRG -d images/fuki -o build/data/FUKI.MRG
+
 mkdir -p "build/gdi"
 cp -f "raw/gdi/track1.bin" "raw/gdi/track2.raw" "build/gdi/"
 ./bin/buildgdi.exe -rebuild -gdi "raw/gdi/disc.gdi" -data "build/data/" -output "build/gdi/"
-mv "build/gdi/track03.bin" "build/gdi/track3.bin"
+# mv -f "build/gdi/track03.bin" "build/gdi/track3.bin"
 echo "Built GDI -> build/gdi/"
 
 echo "Done."

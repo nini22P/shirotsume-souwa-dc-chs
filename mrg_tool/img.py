@@ -251,20 +251,21 @@ def _njit_encode_43(pixels: np.ndarray, nibbles: np.ndarray) -> np.ndarray:
     pend_idx = -1
 
     while i < n:
+        rem = 64 - (i & 63)
         if pend_idx < 0:
             best = 0
             kind = 0
             if i > 0:
                 r = 0
                 prev = pixels[i - 1]
-                while r < 64 and i + r < n and pixels[i + r] == prev:
+                while r < rem and i + r < n and pixels[i + r] == prev:
                     r += 1
                 if r > 1:
                     best = r
                     kind = 0
             if i >= k and pixels[i] == pixels[i - k]:
                 r = 1
-                while r < 64 and i + r < n and pixels[i + r] == pixels[i - k + r]:
+                while r < rem and i + r < n and pixels[i + r] == pixels[i - k + r]:
                     r += 1
                 if r > best:
                     best = r
@@ -323,19 +324,20 @@ def _njit_encode_stream(pixels: np.ndarray, packed: np.ndarray, k: int) -> np.nd
     hb = 0
 
     while i < n:
+        rem = 64 - (i & 63)
         best = 0
         kind = 0
         if i > 0:
             r = 0
             prev = pixels[i - 1]
-            while r < 64 and i + r < n and pixels[i + r] == prev:
+            while r < rem and i + r < n and pixels[i + r] == prev:
                 r += 1
             if r > 1:
                 best = r
                 kind = 0
         if i >= k and pixels[i] == pixels[i - k]:
             r = 1
-            while r < 64 and i + r < n and pixels[i + r] == pixels[i - k + r]:
+            while r < rem and i + r < n and pixels[i + r] == pixels[i - k + r]:
                 r += 1
             if r > best:
                 best = r
@@ -352,7 +354,7 @@ def _njit_encode_stream(pixels: np.ndarray, packed: np.ndarray, k: int) -> np.nd
             i += 1
             continue
         j = i
-        while j < n and j - i < 64:
+        while j < n and j - i < rem:
             if j > i and pixels[j] == pixels[j - 1]:
                 break
             if j >= k and pixels[j] == pixels[j - k]:
