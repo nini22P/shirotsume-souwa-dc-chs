@@ -1,19 +1,15 @@
-# 白诘草话 Dreamcast 版本 简体中文汉化项目
+# 白诘草话 Dreamcast 版本 简体中文翻译项目
 
-文本移植自 [elementary-particle / my-shirotsume-souwa-patch](https://github.com/elementary-particle/my-shirotsume-souwa-patch)，缺乏校对，某些对话排版错乱，未汉化图片。
+文本移植自 [elementary-particle / my-shirotsume-souwa-patch](https://github.com/elementary-particle/my-shirotsume-souwa-patch)，缺乏校对，未汉化图片。
 
 ## 如何打包
 
 打包需要 Windows 下的 bash 环境，如果安装了 git 无需重新下载安装，可直接使用。
 
-1. 新建 `raw/gdi` 文件夹，放入 gdi 镜像。
-2. 在项目路径打开控制台，运行 `sh pack.sh`。
+1. 新建 `raw/cue` 文件夹，放入 cue 镜像。
+2. 在项目路径打开 bash 控制台，运行 `sh pack.sh`。
 
-流程结束后汉化镜像和对应的 xdelta 补丁将保存在 `build/gdi`。
-
-## 注意事项
-
-- 脚本中的 `,` 和 `.` 用途是停顿控制节奏，当前译文中大量使用了 `･` 未修复。
+流程结束后汉化的 gdi 镜像和 xdelta 补丁将保存在 `build/gdi`。
 
 ## 鸣谢
 

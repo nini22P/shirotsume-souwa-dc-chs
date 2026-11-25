@@ -4,13 +4,27 @@ set -euo pipefail
 
 pip install --user numpy numba Pillow 
 
+if [ ! -f "raw/data/SCR.MRG" ] && [ ! -f "raw/gdi/disc.gdi" ]; then
+    CUE_FILE=$(find "raw/cue" -maxdepth 1 -type f -iname "*.cue" | head -n 1)
+    if [ -n "$CUE_FILE" ]; then
+        echo "Found CUE: $CUE_FILE, converting to GDI..."
+        mkdir -p "raw/gdi"
+        ABS_CUE=$(realpath "$CUE_FILE")
+        ABS_OUT=$(realpath "raw/gdi")
+        ./bin/cue2gdi.exe -i "$ABS_CUE" -o "$ABS_OUT"
+    else
+        echo "Please put gdi files in raw/gdi/ or cue/bin files in raw/cue/ and run again"
+        exit 1
+    fi
+fi
+
 if [ -f "raw/data/SCR.MRG" ]; then
     echo "raw/data/ exists, skip GDI extraction"
 elif [ -f "raw/gdi/disc.gdi" ]; then
     ./bin/buildgdi.exe -extract -gdi "raw/gdi/disc.gdi" -output "raw/data"
     echo "Extract GDI -> raw/data/"
 else
-    echo "Please put gdi files in raw/gdi/ and run again"
+    echo "Error: cue2gdi conversion failed to produce raw/gdi/disc.gdi"
     exit 1
 fi
 
@@ -89,11 +103,9 @@ cp -f "build/data/SYSPVR.MRG" "build/data/SYSPVR_P.MRG"
 echo "SYSPVR_M.MRG, SYSPVR_P.MRG <- SYSPVR.MRG (copy)"
 
 mkdir -p "build/gdi"
-cp -f "raw/gdi/track01.bin" "raw/gdi/track02.raw" "build/gdi/"
+cp -f "raw/gdi/track1.bin" "raw/gdi/track2.raw" "build/gdi/"
 ./bin/buildgdi.exe -rebuild -gdi "raw/gdi/disc.gdi" -data "build/data/" -output "build/gdi/"
+mv "build/gdi/track03.bin" "build/gdi/track3.bin"
 echo "Built GDI -> build/gdi/"
-
-# echo "Generating xdelta patch for track03.bin..."
-# ./bin/xdelta3.exe -f -e -s "raw/gdi/track03.bin" "build/gdi/track03.bin" "build/gdi/track03.bin.xdelta"
 
 echo "Done."
