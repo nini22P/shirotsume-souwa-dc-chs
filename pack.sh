@@ -33,9 +33,12 @@ fi
 echo "Mapping slots..."
 python create_mapping.py -s scr.csv -b bin.csv -o build/mapping.csv
 
+python create_layouts.py -m build/mapping.csv -o build/
+echo "Layouts generated -> build/"
+
 python patch_tool.py -b "raw/data/1ST_READ.BIN" -c "bin.csv" -e cp932 -m "build/mapping.csv" -o "build/data/1ST_READ.BIN"
 
-python patch_1st_read.py -i "build/data/1ST_READ.BIN" -o "build/data/1ST_READ.BIN"
+python patch_1st_read.py -i "build/data/1ST_READ.BIN" -o "build/data/1ST_READ.BIN" --layout-meta "build/layout_meta.json"
 
 python patch_encoding.py -b "build/data/1ST_READ.BIN" -c "build/mapping.csv"
 
@@ -48,8 +51,7 @@ python -m mrg_tool scr repack -i "build/SCR" -o "build/data/SCR.MRG"
 echo "Rebuild SCRADR offsets"
 python -m mrg_tool scradr rebuild -i "raw/data/SCRADR.MRG" -o "build/data/SCRADR.MRG"
 
-python create_layouts.py -m build/mapping.csv -o build/
-echo "Layouts generated -> build/"
+PAGE_20X24=$(python -c "import json; print(json.load(open('build/layout_meta.json'))['page_20x24'])")
 
 rebuild_syspvr_mrg() {
     local mrg_name=$1
@@ -65,7 +67,7 @@ rebuild_syspvr_mrg() {
     python generate_texture.py -i build/18x22.txt --page-start 57 \
         --cell-w 18 --cell-h 22 --font "$default_font" --font-size 40 \
         --scale-x 0.95 --offset-y 8 --shrink-pages 2-13,17-32 -o "$work_dir"
-    python generate_texture.py -i build/20x24.txt --page-start 76 \
+    python generate_texture.py -i build/20x24.txt --page-start "$PAGE_20X24" \
         --cell-w 20 --cell-h 24 --font "$default_font" --font-size 46 \
         --scale-x 0.95 --offset-y 9 -o "$work_dir"
 

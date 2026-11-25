@@ -1,4 +1,5 @@
 import argparse
+import json
 import struct
 import sys
 from pathlib import Path
@@ -38,7 +39,7 @@ def require(condition: bool, message: str) -> None:
         raise ValueError(message)
 
 
-def relocate_main_table(data: bytes) -> bytes:
+def relocate_main_table(data: bytes, page_20x24: int = 76) -> bytes:
     patched = bytearray(data)
     table_bytes = ORIG_LIMIT * 2
     new_table_bytes = NEW_LIMIT * 2
@@ -74,7 +75,9 @@ def relocate_main_table(data: bytes) -> bytes:
     for off in LIMIT_SITES:
         struct.pack_into('<H', patched, off, NEW_LIMIT)
 
-    for off, (_, new_page, _) in FONT_PAGE_PATCHES.items():
+    for off, (old_page, new_page, desc) in FONT_PAGE_PATCHES.items():
+        if off == 0x130750:
+            new_page = page_20x24
         struct.pack_into('<H', patched, off, new_page)
 
     require(
@@ -95,6 +98,8 @@ def relocate_main_table(data: bytes) -> bytes:
     for off in LIMIT_SITES:
         print(f'  limit 0x{off:05X} ({LIMIT_DESC.get(off, "?")}): 0x{ORIG_LIMIT:04X} -> 0x{NEW_LIMIT:04X} ({NEW_LIMIT})')
     for off, (old_page, new_page, desc) in FONT_PAGE_PATCHES.items():
+        if off == 0x130750:
+            new_page = page_20x24
         print(f'  font  0x{off:05X} ({desc}): {old_page} -> {new_page}')
     return bytes(patched)
 
@@ -103,6 +108,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(description='Patch 1ST_READ.BIN font table and page starts')
     parser.add_argument('-i', '--input', required=True, help='Input 1ST_READ.BIN file')
     parser.add_argument('-o', '--output', required=True, help='Output 1ST_READ.BIN file')
+    parser.add_argument('--page-20x24', type=int, default=None, help='Starting SYSPVR page for 20x24 font')
+    parser.add_argument('--layout-meta', default=None, help='Path to layout_meta.json')
     args = parser.parse_args()
 
     in_path = Path(args.input)
@@ -111,7 +118,13 @@ def main() -> None:
         print(f'ERROR: {in_path} not found', file=sys.stderr)
         sys.exit(1)
 
-    patched = relocate_main_table(in_path.read_bytes())
+    page_20x24 = 76
+    if args.layout_meta:
+        page_20x24 = int(json.loads(Path(args.layout_meta).read_text(encoding='utf-8'))['page_20x24'])
+    if args.page_20x24 is not None:
+        page_20x24 = args.page_20x24
+
+    patched = relocate_main_table(in_path.read_bytes(), page_20x24=page_20x24)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_bytes(patched)
     print(f'[patch] Wrote {out_path}')

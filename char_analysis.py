@@ -1,8 +1,12 @@
-import argparse, csv, re, sys
+import argparse, csv, re, sys, unicodedata
 from collections import defaultdict
 from pathlib import Path
 
 TAG_RE = re.compile(r'<[^>]*>')
+
+def is_wide(ch: str) -> bool:
+    return unicodedata.east_asian_width(ch) not in ('Na', 'H')
+
 
 def collect(path: Path, col_text: str, col_trans: str):
     cnt_trans = defaultdict(int)
@@ -17,16 +21,18 @@ def collect(path: Path, col_text: str, col_trans: str):
         trans = TAG_RE.sub('', (row.get(col_trans) or '').strip())
 
         for ch in text:
-            cnt_total[ch] += 1
+            if is_wide(ch):
+                cnt_total[ch] += 1
 
         for ch in trans:
-            cnt_trans[ch] += 1
-            cnt_total[ch] += 1
+            if is_wide(ch):
+                cnt_trans[ch] += 1
+                cnt_total[ch] += 1
 
         if trans:
             seen = set()
             for ch in trans:
-                if ch not in seen:
+                if is_wide(ch) and ch not in seen:
                     seen.add(ch)
                     examples[ch].append((f'{path.name}:{i}', text, trans))
 
@@ -45,7 +51,7 @@ def main():
     out_path = Path(args.output)
 
     s_cnt, s_total, s_ex = collect(csv_path, 'text', 'translation')
-    b_cnt, b_total, b_ex = collect(bin_csv_path, 'text', 'replace')
+    b_cnt, b_total, b_ex = collect(bin_csv_path, 'text', 'translation')
 
     cnt_trans = s_cnt
     for ch, n in b_cnt.items():
@@ -65,7 +71,7 @@ def main():
     report = []
     report.append('=' * 80)
     report.append('字符使用频率分析报告')
-    report.append(f'统计范围: scr.csv(translation) + bin.csv(replace)')
+    report.append(f'统计范围: scr.csv(translation) + bin.csv(translation)（仅全角字符）')
     report.append(f'不重复字符总数: {len(chars)}')
     report.append(f'翻译中字符总出现次数: {sum(cnt_trans.values())}')
     report.append('=' * 80)

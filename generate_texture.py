@@ -66,9 +66,9 @@ def main():
         page_num = args.page_start + pi
         has_glyphs = any(ch not in ('\u00B7', '\uFFFD', '') for line in lines for ch in line)
         if not has_glyphs:
-            # 空页写 32x32 透明占位（data_fmt=0x10，仅 544B），避免 MRG 头部出现 0xFFFF 空洞截断后续页
-            img = Image.new('RGBA', (32, 32), (0, 0, 0, 0))
-            page_specs[page_num] = (32, 32, 2, 0x10)
+            # 空页写 8x8 透明占位（data_fmt=0x10，仅 64B），避免 MRG 头部出现 0xFFFF 空洞截断后续页
+            img = Image.new('RGBA', (8, 8), (0, 0, 0, 0))
+            page_specs[page_num] = (8, 8, 2, 0x10)
         else:
             img = Image.new('RGBA', (TEX_SIZE, TEX_SIZE), (255, 255, 255, 0))
             render_page(img, lines, args.cell_w, args.cell_h, font,
@@ -79,15 +79,15 @@ def main():
         print(f'  {out_path}', file=sys.stderr)
 
     if args.shrink_pages:
-        blank_32 = Image.new('RGBA', (32, 32), (0, 0, 0, 0))
+        blank_8 = Image.new('RGBA', (8, 8), (0, 0, 0, 0))
         for part in args.shrink_pages.split(','):
             part = part.strip()
             if not part:
                 continue
             lo, hi = (int(x) for x in part.split('-')) if '-' in part else (int(part), int(part))
             for idx in range(lo, hi + 1):
-                blank_32.save(out_dir / f'{idx:03d}.png')
-                page_specs[idx] = (32, 32, 2, 0x10)
+                blank_8.save(out_dir / f'{idx:03d}.png')
+                page_specs[idx] = (8, 8, 2, 0x10)
 
     meta_csv = out_dir / '_meta.csv'
     if meta_csv.exists():
