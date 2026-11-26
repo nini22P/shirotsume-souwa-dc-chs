@@ -9,7 +9,7 @@
 1. 新建 `raw/cue` 文件夹，放入 cue 镜像。
 2. 在项目路径打开 bash 控制台，运行 `sh pack.sh`。
 
-流程结束后汉化的 gdi 镜像和 xdelta 补丁将保存在 `build/gdi`。
+流程结束后汉化的 gdi 镜像将保存在 `build/gdi`。
 
 ## 鸣谢
 

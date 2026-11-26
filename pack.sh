@@ -103,6 +103,8 @@ cp -f "build/data/SYSPVR.MRG" "build/data/SYSPVR_P.MRG"
 echo "SYSPVR_M.MRG, SYSPVR_P.MRG <- SYSPVR.MRG (copy)"
 
 python -m mrg_tool img replace -i raw/data/FUKI.MRG -d images/fuki -o build/data/FUKI.MRG
+python -m mrg_tool img replace -i raw/data/PCG.MRG -d images/pcg -o build/data/PCG.MRG
+python -m mrg_tool img replace -i raw/data/TITLE.MRG -d images/title -o build/data/TITLE.MRG
 
 mkdir -p "build/gdi"
 cp -f "raw/gdi/track1.bin" "raw/gdi/track2.raw" "build/gdi/"
